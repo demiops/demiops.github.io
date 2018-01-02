@@ -20,7 +20,7 @@
 	<div class="row-fluid">
 		<div class="span9">
             <div class="headline"><h3>Contactanos</h3></div>
-            <p>Con base en la ciudad de Hermosillo, Sonora, Mexico, nuestra mision es proveer soluciones para cloud que permitan su administracion, control y automatizacion de una manera sencilla, el cual permitira a su negocio concentrarse en lo que realiza mejor (su negocio en si) y dejar atras todos los problemas que envuelve la administracion de tecnologias de informacion. Emiops es una plataforma completa en un solo bloque que trae una nueva  perspectiva y la manera mas sencilla para proveer soluciones cloud a su empresa.</p><br />
+            <p>Con base en la ciudad de Hermosillo, Sonora, Mexico, nuestra mision es proveer soluciones para cloud que permitan su administracion, control y automatizacion de una manera sencilla, el cual permitira a su negocio concentrarse en lo que realiza mejor (su negocio en si) y dejar atras todos los problemas que envuelve la administracion de tecnologias de informacion. Demiops es una plataforma completa en un solo bloque que trae una nueva  perspectiva y la manera mas sencilla para proveer soluciones cloud a su empresa.</p><br />
 			<form>
                 <label>Nombre</label>
                 <input type="text" class="span7 border-radius-none" />
@@ -38,8 +38,8 @@
             <ul class="unstyled who margin-bottom-20">
                 <li><a href="#"><i class="icon-home"></i>Hermosillo, Sonora, Mexico</a></li>
                 <li><a href="#"><i class="icon-envelope-alt"></i>info@demiops.com</a></li>
-                <li><a href="#"><i class="icon-phone-sign"></i>+1 210 595 0501</a></li>
-                <li><a href="#"><i class="icon-globe"></i>http://beta.demiops.com.mx</a></li>
+                <li><a href="#"><i class="icon-phone-sign"></i>+1 512 627 9817</a></li>
+                <li><a href="#"><i class="icon-globe"></i>http://www.demiops.com</a></li>
             </ul>
 
         	<!-- Business Hours -->
@@ -50,7 +50,7 @@
             	<li><strong>Domingo:</strong> Cerrado</li>
             </ul>
 
-        	<!-- Why we are? -->
+        	<!-- Why we are? 
             <div class="headline"><h3>Why we are?</h3></div>
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
             <ul class="unstyled">
@@ -58,6 +58,7 @@
             	<li><i class="icon-ok color-green"></i> Blanditiis praesentium volup</li>
             	<li><i class="icon-ok color-green"></i> Eos et accusamus</li>
             </ul>
+            -->
         </div><!--/span3-->
     </div><!--/row-fluid-->        
 
