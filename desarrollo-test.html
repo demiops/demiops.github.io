@@ -124,29 +124,30 @@
                             </ul>
                             <b class="caret-out"></b>                        
                         </li>
-                        <li>
+			<li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aprenda
-                                <b class="caret"></b>                            
+                                <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
+                                <li><a href="http://www.demiops.com/documentacion/">Documentacion</a></li>
                                 <li><a href="http://www.youtube.com/user/DemiopsTech">Videos</a></li>
                                 <li><a href="http://www.youtube.com/user/DemiopsTech">Webinars</a></li>
                                 <!-- <li><a href="estandares.html">Estandares</a></li> -->
                             </ul>
-                            <b class="caret-out"></b>                        
+                            <b class="caret-out"></b>
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acerca de
-                                <b class="caret"></b>                            
+                                <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="http://status.demiops.com">Estado | Status</a></li>
-                                <li><a href="http://blog.demiops.com">Blog</a></li>
-                                <li><a href="eventos.html">Eventos</a></li>
+                                <li><a href="http://www.demiops.com/documentacion/blog/">Blog</a></li>
+                                <li><a href="https://www.facebook.com/demiops/events/">Eventos</a></li>
                                 <li><a href="terminos.html">Terminos de Uso</a></li>
                                 <li><a href="privacidad.html">Politica de Privacidad</a></li>
                             </ul>
-                            <b class="caret-out"></b>                        
+                            <b class="caret-out"></b>
                         </li>
                         <li>
                             <a href="contactanos.html">Contactanos</a> 
