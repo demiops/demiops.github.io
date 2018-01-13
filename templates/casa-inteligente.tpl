@@ -9,11 +9,16 @@
                     <div class="span12">
                         <h4><a href="#"></a></h4>
 			<p></p>
-			<div class="headline"><h4>Manejo de Aparatos y Dispositivos</h4></div>
-			<div class="headline"><h4>Seguridad del Hogar</h4></div>
-			<div class="headline"><h4>Jardin Inteligente</h4></div>
-			<div class="headline"><h4>Control de Temperatura Ambiental</h4></div>
-			<div class="headline"><h4>Iluminacion Inteligente</h4></div>
+			<h4><a href="#">Manejo de Aparatos y Dispositivos</a></h4>
+			<p></p>
+			<h4><a href="#">Seguridad del Hogar</a></h4>
+			<p></p>
+			<h4><a href="#">Jardin Inteligente</a></h4>
+			<p></p>
+			<h4><a href="#">Control de Temperatura Ambiental</a></h4>
+			<p></p>
+			<h4><a href="#">Iluminacion Inteligente</a></h4>
+			<p></p>
                     </div>
                 </div><!--/welcome-block-->
             </div><!--/row-fluid-->        

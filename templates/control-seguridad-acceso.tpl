@@ -9,9 +9,12 @@
                     <div class="span12">
                         <h4><a href="#"></a></h4>		
 			<p></p>
-		  	<h4>Acceso de Personal</h4>
-			<h4>Acceso Vehicular y Estacionamientos</h4>
-			<h4>Reconocimiento Facial</h4>	
+                        <h4><a href="#">Acceso de Personal</a></h4>		
+			<p></p>
+                        <h4><a href="#">Acceso Vehicular y Estacionamientos</a></h4>		
+			<p></p>
+                        <h4><a href="#">Reconocimiento Facial</a></h4>		
+			<p></p>
                     </div>
                 </div><!--/welcome-block-->
             </div><!--/row-fluid-->        
