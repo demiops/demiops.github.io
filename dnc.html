@@ -121,6 +121,10 @@
                                 <li><a href="videojuegos.html">Videojuegos</a></li>
                                 <li><a href="educacion-investigacion.html">Educacion e Investigacion</a></li>
                                 <li><a href="medios-sociales.html">Medios y Redes Sociales</a></li>
+                                <li><a href="casa-inteligente.html">Casa Inteligente</a></li>
+                                <li><a href="transportes.html">Transportes</a></li>
+                                <li><a href="agricultura.html">Agricultura</a></li>
+                                <li><a href="control-seguridad-acceso.html">Control de Seguridad y Acceso</a></li>
                             </ul>
                             <b class="caret-out"></b>                        
                         </li>
