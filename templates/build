@@ -1,6 +1,0 @@
-#!/bin/bash
-
-for i in `ls *.tpl | awk -F'.' '{print $1}'` ; do cat header.tpl > ../$i.html ; cat $i.tpl >> ../$i.html ; cat footer.tpl >> ../$i.html ; done
-
-rm -f ../header.html 
-rm -f ../footer.html
