@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Quiebres de stock de ingredientes críticos y excesos de insumos en restaurantes mexicanos | Demiops</title>
+  <meta name="description" content="En la cocina de un restaurante el tiempo es oro y el menú es la carta de presentación. Cuando, en plena hora pico, falta un ingrediente esencial (por…">
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+  <link rel="canonical" href="https://demiops.com/soluciones/mexico/restaurantes/quiebres-stock-ingredientes-criticos-mismo-tiempo-existen-excedentes.html">
+
+  <style>
+    .resources-page main { padding-top: 66px; }
+
+    .article-head {
+      background: #f5f6f8;
+      padding: 34px 0 52px;
+      border-bottom: 1px solid #eceef1;
+    }
+
+    .article-breadcrumbs ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      font-size: 14px;
+      color: #7a7a7a;
+    }
+
+    .article-breadcrumbs li + li {
+      padding-left: 10px;
+    }
+
+    .article-breadcrumbs li + li::before {
+      content: "/";
+      display: inline-block;
+      padding-right: 10px;
+      color: #b0b0b0;
+    }
+
+    .article-breadcrumbs a {
+      color: #6a6a6a;
+    }
+
+    .article-breadcrumbs a:hover {
+      color: var(--heading-color);
+    }
+
+    .article-meta {
+      color: var(--heading-color);
+      font-family: var(--nav-font);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .article-head h1 {
+      color: #3d4d6a;
+      max-width: 1000px;
+      font-size: clamp(36px, 4.5vw, 56px);
+      line-height: 1.08;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .article-deck {
+      max-width: 800px;
+      font-size: 19px;
+      line-height: 1.65;
+      color: #666;
+      margin: 0;
+    }
+
+    .article-section {
+      padding: 60px 0;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 820px);
+      gap: 52px;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .article-toc {
+      position: sticky;
+      top: 105px;
+      background: #f5f6f8;
+      padding: 22px 18px;
+      border-radius: 8px;
+      border-top: 3px solid var(--accent-color);
+    }
+
+    .article-toc strong {
+      display: block;
+      color: #3d4d6a;
+      font-family: var(--heading-font);
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .article-toc a {
+      display: block;
+      color: #666;
+      font-size: 14px;
+      padding: 7px 8px;
+      margin-left: -8px;
+      border-left: 2px solid transparent;
+    }
+
+    .article-toc a:hover {
+      color: var(--heading-color);
+      border-left-color: var(--accent-color);
+    }
+
+    .article-content {
+      color: var(--default-color);
+      font-size: 17px;
+      line-height: 1.82;
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      color: var(--heading-color);
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 42px 0 16px;
+    }
+
+    .article-content section:first-child h2 {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: #3d4d6a;
+      font-size: 22px;
+      font-weight: 650;
+      margin: 28px 0 12px;
+    }
+
+    .article-content p {
+      margin-bottom: 18px;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      padding-left: 1.35rem;
+      margin-bottom: 22px;
+    }
+
+    .article-content li {
+      margin-bottom: 8px;
+    }
+
+    .article-content strong {
+      color: #3d4d6a;
+    }
+
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0 28px;
+      font-size: 15px;
+    }
+
+    .article-content th,
+    .article-content td {
+      border: 1px solid #e0e3e7;
+      padding: 12px 14px;
+      vertical-align: top;
+    }
+
+    .article-content th {
+      background: #f5f6f8;
+      color: #3d4d6a;
+    }
+
+    .demiops-solution {
+      margin-top: 46px;
+      padding: 30px;
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      border-left: 5px solid var(--heading-color);
+    }
+
+    .demiops-solution .solution-label {
+      color: var(--heading-color);
+      font-family: var(--nav-font);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .demiops-solution h2 {
+      color: #3d4d6a;
+      margin: 7px 0 14px;
+    }
+
+    .demiops-solution .solution-button {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--accent-color);
+      color: #fff;
+      padding: 11px 24px;
+      border-radius: 50px;
+      font-family: var(--heading-font);
+      font-weight: 600;
+    }
+
+    .demiops-solution .solution-button:hover {
+      background: var(--heading-color);
+      color: #fff;
+    }
+
+    .availability-note {
+      margin-top: 16px;
+      background: #f5f6f8;
+      border: 1px solid #e4e6e9;
+      border-radius: 8px;
+      padding: 15px 17px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #6d6d6d;
+    }
+
+    .availability-note i {
+      color: var(--heading-color);
+      margin-right: 6px;
+    }
+
+    .article-sources {
+      border-top: 1px solid #e5e5e5;
+      margin-top: 46px;
+      padding-top: 24px;
+    }
+
+    .article-sources h2 {
+      margin-top: 0;
+    }
+
+    .article-sources a {
+      word-break: break-word;
+    }
+
+    .article-cta {
+      background: #3d4d6a;
+      color: #fff;
+      padding: 52px 0;
+    }
+
+    .article-cta h2 {
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .article-cta p {
+      color: rgba(255,255,255,.8);
+      margin: 0;
+    }
+
+    .article-cta .cta-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 50px;
+      background: var(--accent-color);
+      color: #fff;
+      font-family: var(--heading-font);
+      font-weight: 600;
+    }
+
+    .article-cta .cta-btn:hover {
+      background: var(--heading-color);
+      color: #fff;
+    }
+
+    .related-section {
+      background: #f5f6f8;
+    }
+
+    .related-section .section-title {
+      padding-bottom: 38px;
+    }
+
+    .related-card {
+      height: 100%;
+      background: #fff;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 0 25px rgba(0,0,0,.06);
+      border-top: 3px solid transparent;
+      transition: .3s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      border-top-color: var(--accent-color);
+    }
+
+    .related-card .related-meta {
+      color: var(--heading-color);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .related-card h3 {
+      color: #3d4d6a;
+      font-size: 20px;
+      line-height: 1.3;
+      margin: 9px 0 13px;
+    }
+
+    .related-card .read-more {
+      color: var(--heading-color);
+      font-weight: 600;
+    }
+
+    @media (max-width: 1199px) {
+      .resources-page main { padding-top: 60px; }
+    }
+
+    @media (max-width: 991px) {
+      .article-layout { display: block; }
+      .article-toc { display: none; }
+    }
+
+    @media (max-width: 767px) {
+      .article-head { padding: 28px 0 40px; }
+      .article-section { padding: 42px 0; }
+      .demiops-solution { padding: 24px; }
+    }
+  </style>
+
+</head>
+
+<body class="resources-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="/index.html" class="logo d-flex align-items-center me-auto">
+        <img src="/assets/img/logo.png" alt="Demiops">
+        <h1 class="sitename">Demiops</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/index.html#hero">Inicio</a></li>
+          <li><a href="/index.html#about">Nosotros</a></li>
+
+          <li class="dropdown"><a href="/index.html#services"><span>Productos</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/demiops-core.html">Demiops Core</a></li>
+              <li><a href="/demiops-data.html">Demiops Data</a></li>
+              <li><a href="/demiops-intelligence.html">Demiops Intelligence - Operaciones IA</a></li>
+              <li><a href="/modem.html">Modernizacion Empresarial</a></li>
+              <li><a href="/servicios-profesionales.html">Servicios Profesionales</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Tecnologia</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/asistentes-ia.html">Asistentes de Inteligencia Artificial</a></li>
+              <li><a href="/agentes-ia.html">Agentes de Inteligencia Artificial</a></li>
+              <li><a href="/automatizacion-inteligente.html">Automaticazion Inteligente</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/index.html#faq-2">Preguntas Frequentes</a></li>
+
+          <li class="dropdown">
+            <a href="/soluciones/" class="active"><span>Soluciones</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/soluciones/">Problemas y Soluciones para PYMEs</a></li>
+              <li><a href="/assets/doc/Cloud-Hybrida-Demiops.pdf">Caso de Uso - Demiops Core</a></li>
+              <li><a href="/assets/doc/Demiops Intelligence-Demiops.pdf">Caso de Uso - Demiops Intelligence</a></li>
+              <li><a href="/assets/doc/MODEM-Modernizacion-Empresarial-para-PYMEs.pdf">Caso de Uso - MODEM</a></li>
+              <li><a href="/assets/doc/Servicios-Profesionales-Demiops.pdf">Caso de Uso - Servicios Profesionales</a></li>
+              <li><a href="/assets/doc/Asistentes-Inteligentes-para-PyMEs.pdf">Caso de Uso - Asistente de IA</a></li>
+              <li><a href="/assets/doc/Agentes-Inteligentes-para-PyMEs.pdf">Caso de Uso - Agente de IA</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/index.html#contact">Contacto</a></li>
+          <li><a href="/en/index.html" style="color: #f6b26b; font-weight: bold;">EN</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="/index.html#contact">Inicia Ya</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <header class="article-head">
+      <div class="container">
+        <nav class="article-breadcrumbs" aria-label="breadcrumb">
+          <ol>
+            <li><a href="/soluciones/">Soluciones</a></li>
+            <li><a href="/soluciones/?industria=restaurantes">Restaurantes</a></li>
+            <li aria-current="page">México</li>
+          </ol>
+        </nav>
+
+        <div class="article-meta">Restaurantes · México</div>
+        <h1>Quiebres de stock de ingredientes críticos y excesos de insumos en restaurantes mexicanos</h1>
+        
+        <p class="article-deck">En la cocina de un restaurante el tiempo es oro y el menú es la carta de presentación. Cuando, en plena hora pico, falta un ingrediente esencial (por ejemplo, la carne para la fajita del día) mientras que en la bodega hay pilas de servilletas o aceites sin…</p>
+        
+      </div>
+    </header>
+
+    <section class="article-section">
+      <div class="container">
+        <div class="article-layout">
+          <aside class="article-toc" aria-label="Índice del artículo">
+            <strong>En esta página</strong>
+            <a href="#introduccion">Introducción</a>
+            <a href="#como-aparece">Cómo aparece</a>
+            <a href="#senales">Señales</a>
+            <a href="#por-que-ocurre">Por qué ocurre</a>
+            <a href="#impacto">Impacto</a>
+            <a href="#crecer">Al crecer</a>
+            <a href="#controlar">Qué controlar</a>
+            <a href="#solucion">Cómo puede ayudar Demiops</a>
+            <a href="#fuentes">Fuentes</a>
+          </aside>
+
+          <article class="article-content">
+            
+            <section id="introduccion">
+              <h2>Introducción</h2>
+              <p>En la cocina de un restaurante el tiempo es oro y el menú es la carta de presentación. Cuando, en plena hora pico, falta un ingrediente esencial (por ejemplo, la carne para la fajita del día) mientras que en la bodega hay pilas de servilletas o aceites sin rotar, el impacto se siente de inmediato: platos incompletos, clientes insatisfechos y dinero atrapado en productos que se van a perder. Este desequilibrio entre escasez y exceso es una de las causas principales de la merma que, según el blog de Fudo, representa entre <strong>4 % y 10 % de los insumos</strong> comprados por los restaurantes.</p>
+<p>El objetivo de este artículo es que dueños y gerentes identifiquen cómo se manifiesta este problema, por qué ocurre y qué información deben controlar para reducir tanto los quiebres como los sobre‑stocks.</p>
+
+            </section>
+            
+            
+
+            <section id="como-aparece">
+              <h2>Cómo aparece este problema en Restaurantes</h2>
+              <ol>
+<li><strong>Pedidos inesperados o promociones</strong> que disparan la demanda de un platillo estrella y, por ende, de su ingrediente clave.</li>
+<li><strong>Entregas parciales o retrasos</strong> de proveedores que dejan el inventario por debajo del punto de reorden justo antes de una jornada ocupada.</li>
+<li><strong>Registros manuales</strong> o recetas incompletas que hacen que el consumo real no se refleje en el sistema y, por tanto, no se generan alertas a tiempo.</li>
+<li><strong>Acumulación de insumos de baja rotación</strong> (por ejemplo, empaques, condimentos poco usados) que ocupan espacio y capital sin aportar al menú del día.</li>
+</ol>
+<p>El resultado es una cocina que grita “¡se acabó!” mientras el almacén muestra un saldo positivo de otros productos.</p>
+
+            </section>
+            
+            
+
+            <section id="senales">
+              <h2>Señales de que el negocio tiene este problema</h2>
+              <ol>
+<li><strong>Platos del menú que se cancelan con frecuencia</strong> en horarios de alta afluencia.</li>
+<li><strong>Ajustes de último minuto en recetas</strong> para sustituir ingredientes por otros disponibles.</li>
+<li><strong>Inventario físico que difiere notablemente del teórico</strong> en los conteos cíclicos.</li>
+<li><strong>Aumento de la merma por vencimiento</strong> de productos que no se venden (pescado, verduras de temporada).</li>
+<li><strong>Compras impulsivas de insumos “por si acaso”</strong> que no aparecen en el escandallo de costos.</li>
+<li><strong>Proveedores que reciben reclamaciones repetidas por pedidos incompletos</strong> o cambios de última hora.</li>
+<li><strong>Reportes de Food Cost</strong> que se alejan del objetivo del <strong>30 %</strong> recomendado, sin una razón clara.</li>
+</ol>
+
+            </section>
+            
+            
+
+            <section id="por-que-ocurre">
+              <h2>Por qué ocurre</h2>
+              <h3>Operativas</h3>
+<ul>
+<li>Falta de <strong>fichas de producto y recetas estándar</strong> que definan cantidades exactas por porción (Fudo).</li>
+<li>Ausencia de <strong>puntos de reorden y stock mínimo</strong> configurados para cada insumo crítico.</li>
+<li>Procesos manuales de registro que generan <strong>errores de transcripción</strong> y retrasos en la actualización del inventario.</li>
+</ul>
+<h3>Administrativas</h3>
+<ul>
+<li><strong>Proveedores poco confiables</strong> o sin acuerdos claros de tiempos de entrega, lo que dificulta calcular un stock de seguridad fiable.</li>
+<li>No contar con <strong>alertas automáticas</strong> que avisen cuando un insumo alcanza su punto de reorden.</li>
+<li>Falta de <strong>análisis de variaciones</strong> (consumo vs. previsión) que permita ajustar cantidades de compra.</li>
+</ul>
+<h3>Comerciales</h3>
+<ul>
+<li>Menús rígidos que no se adaptan rápidamente a la disponibilidad real de materias primas.</li>
+<li>Promociones que aumentan la demanda de ciertos platos sin revisar la capacidad de suministro.</li>
+</ul>
+<h3>Externas</h3>
+<ul>
+<li><strong>Variaciones estacionales</strong> y cambios climáticos que alteran la disponibilidad de productos frescos.</li>
+<li><strong>Restricciones logísticas</strong> (tránsito, feriados) que retrasan la entrega de proveedores.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="impacto">
+              <h2>Qué impacto puede tener</h2>
+              <ul>
+<li><strong>Pérdida de ventas</strong>: cada plato que no se sirve representa un ticket completo que se va.</li>
+<li><strong>Daño a la reputación</strong>: reseñas negativas por falta de productos en el menú.</li>
+<li><strong>Incremento de la merma</strong>: exceso de insumos de baja rotación que terminan caducados.</li>
+<li><strong>Reducción del margen</strong>: con márgenes típicos de <strong>3 % a 5 %</strong> en la industria, cualquier merma reduce la rentabilidad.</li>
+<li><strong>Capital inmovilizado</strong>: el dinero atrapado en sobre‑stock no genera ingresos y limita la capacidad de inversión en otras áreas (publicidad, personal).</li>
+<li><strong>Mayor carga operativa</strong>: el personal de cocina y de almacén dedica tiempo a buscar sustitutos o a registrar ajustes manuales.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="crecer">
+              <h2>Por qué se vuelve más difícil al crecer</h2>
+              <ul>
+<li><strong>Multiplicidad de sucursales</strong>: cada local tiene su propio consumo, proveedores y espacio de almacén, lo que complica la consolidación de datos.</li>
+<li><strong>Mayor número de ítems en el menú</strong>: aumenta la cantidad de recetas y, por ende, la complejidad de los cálculos de consumo.</li>
+<li><strong>Equipos de compra más extensos</strong>: la coordinación entre varios compradores y proveedores genera más oportunidades de error.</li>
+<li><strong>Variabilidad de demanda</strong>: eventos, festividades y cambios de tendencia se vuelven más difíciles de prever cuando el negocio atiende a diferentes segmentos de clientes.</li>
+<li><strong>Necesidad de sincronizar inventario físico con ventas en varios puntos de venta</strong> (comedor, delivery, apps de terceros).</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="controlar">
+              <h2>Qué debería poder saber o controlar el negocio</h2>
+              <ol>
+<li><strong>Niveles actuales y reales de cada insumo</strong> (teórico vs. físico) y su ubicación dentro del almacén.</li>
+<li><strong>Punto de reorden y stock de seguridad</strong> por producto, calculado con la fórmula:<br />
+[
+\text{Punto de reorden} = (\text{Consumo diario} \times \text{Días de entrega}) + \text{Stock de seguridad}
+]<br />
+(POS Colombia).</li>
+<li><strong>Consumo diario promedio</strong> de cada ingrediente, actualizado en tiempo real a través del registro de ventas.</li>
+<li><strong>Fecha de caducidad y rotación (PEPS)</strong> para productos perecederos.</li>
+<li><strong>Rendimiento de cada receta</strong> (porciones, pérdida esperada) para determinar la cantidad exacta a descontar del inventario.</li>
+<li><strong>Historial de entregas y desempeño de proveedores</strong> (tiempos, calidad, incidencias).</li>
+<li><strong>KPIs de Food Cost, margen y rotación de inventario</strong> para detectar desviaciones tempranas.</li>
+<li><strong>Alertas y notificaciones</strong> cuando un insumo crítico se acerca al punto de reorden o cuando un producto está próximo a vencer.</li>
+</ol>
+
+            </section>
+            
+            
+
+            <section id="solucion" class="demiops-solution">
+              <div class="solution-label">Cómo puede ayudar Demiops</div>
+              <h2>Solución Demiops</h2>
+              <p>Esta capacidad permite registrar cada ingrediente con sus unidades, lotes y fechas de vencimiento; establecer niveles mínimos, puntos de reorden y stocks de seguridad; y generar alertas automáticas cuando los niveles críticos se acercan. Además, el módulo descuenta automáticamente los insumos al registrar cada venta, lo que mantiene el inventario teórico alineado con el consumo real y facilita la detección de discrepancias. Con la posibilidad de usar códigos de barras o QR, el proceso de recepción y ajuste de stock se vuelve rápido y fiable, reduciendo los errores manuales que suelen originar los quiebres. En restaurantes con varios locales, la misma herramienta centraliza la información y permite comparar la eficiencia de cada sucursal.</p>
+
+              <a class="solution-button" href="/index.html#contact">Hablar con Demiops</a>
+            </section>
+            
+
+            <div class="availability-note">
+              <i class="bi bi-info-circle"></i>
+              <strong>Nota sobre disponibilidad:</strong>
+              Las funciones descritas pueden variar según la configuración, versión, país, industria y necesidades específicas de cada negocio.
+              Algunas capacidades pueden requerir configuración, adaptación o desarrollo adicional y pueden incorporarse en versiones futuras de la solución.
+            </div>
+            
+
+            <section id="cierre">
+              <h2>Cierre</h2>
+              <p>Los quiebres de stock de ingredientes críticos mientras hay excedentes de otros insumos son una fuente evitable de pérdidas y de deterioro de la experiencia del cliente. Para controlarlos es necesario contar con una visión clara y en tiempo real del inventario, definir puntos de reorden y stock de seguridad, y automatizar alertas que activen procesos de compra antes de que la falta se convierta en un problema. La capacidad <strong>Inventario y Control de Existencias</strong> brinda precisamente esas herramientas y constituye un punto de partida sólido para equilibrar la disponibilidad de insumos críticos y reducir los excesos.</p>
+
+            </section>
+            
+
+            
+            <section id="fuentes" class="article-sources">
+              <h2>Fuentes consultadas</h2>
+              <ol>
+                
+                <li>
+                  
+                  <a href="https://blog.fu.do/control-de-inventario-en-restaurantes-7-pasos-para-optimizar-tus-insumos" target="_blank" rel="nofollow noopener">Fudo – Control de inventario en restaurantes: 7 pasos para optimizar tus insumos (</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="https://poscolombia.com/blog/evitar-quiebres-inventario-restaurante" target="_blank" rel="nofollow noopener">POS Colombia – ¿Cómo no quedarte sin inventario en plena hora pico? (</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="https://es.scribd.com/document/1042829989/Analisis-Quiebres-de-Stock" target="_blank" rel="nofollow noopener">Scribd – Análisis Quiebres de Stock (</a>
+                  
+                </li>
+                
+              </ol>
+            </section>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-cta">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h2>¿Tu negocio enfrenta este problema?</h2>
+            <p>Demiops puede adaptar una solución a la forma en que opera tu empresa.</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <a class="cta-btn" href="/index.html#contact">Contáctanos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="related-section section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Problemas Relacionados</h2>
+        </div>
+
+        <div class="row gy-4">
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Restaurantes · México</div>
+              <h3>Margen bajo presión: cómo enfrentar los aumentos simultáneos de insumos, energía, renta y logística en restaurantes mexicanos</h3>
+              <a class="read-more" href="/soluciones/mexico/restaurantes/compresion-margen-aumentos-simultaneos-insumos-energia-renta-logistica.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Restaurantes · México</div>
+              <h3>Diferencias entre ventas de caja, terminales, efectivo y plataformas de entrega al cierre del día en restaurantes mexicanos</h3>
+              <a class="read-more" href="/soluciones/mexico/restaurantes/diferencias-ventas-caja-terminales-efectivo-plataformas-entrega-cierre.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Restaurantes · México</div>
+              <h3>Rotación elevada de personal en restaurantes: cómo los turnos incompletos elevan el costo de capacitación</h3>
+              <a class="read-more" href="/soluciones/mexico/restaurantes/rotacion-elevada-personal-deja-turnos-incompletos-eleva-costo.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+  </main>
+<footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Unete A Nuestra Lista de Correo</h4>
+            <p>Suscribete a nuestra lista de correo para recibir las ultimas noticias sobre productos y servicios
+              Demiops!</p>
+            <form
+              action="https://docs.google.com/forms/d/e/1FAIpQLSdp3P4VUMDW5lahOkjoAm0iMS6a3mKbym6rhSJwNBwQsTW5kw/formResponse"
+              method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="entry.1045781291"><input type="submit"
+                  value="Suscribete"></div>
+              <div class="loading">Cargando</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Tu suscripcion fue recibida. Muchas Gracias!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="/index.html" class="d-flex align-items-center">
+            <span class="sitename">Demiops</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>11201 N Tatum Blvd #300</p>
+            <p>Phoenix, AZ 85028</p>
+            <p class="mt-3"><strong>Telefono:</strong> <span>+1 480 331 9210</span></p>
+            <p><strong>Email:</strong> <span>info@demiops.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Ligas Utiles</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Sobre Nosotros</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/terminos.html">Terminos de Servicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/privacidad.html">Politica de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Productos y Servicios</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-core.html">Demiops Core</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-data.html">Demiops Data</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-intelligence.html">Demiops Intelligence</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/modem.html">ModEm - Modernizacion Empresarial</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/servicios-profesionales.html">Servicios Profesionales</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Siguenos</h4>
+          <p>Contactanos por cualquiera de nuestras redes sociales.</p>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/demiops"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/demiopsinc"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com/company/demiops"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Demiops, Inc.</strong> <span>Todos Los Derechos
+          Reservados</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+
+</body>
+</html>
