@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cómo reducir las filas y los tiempos de espera en horas pico para evitar que los clientes abandonen la cafetería | Demiops</title>
+  <meta name="description" content="En muchas cafeterías de México, especialmente en ubicaciones cercanas a oficinas, colegios o campus universitarios, la hora del almuerzo o el “brunch” de…">
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+  <link rel="canonical" href="https://demiops.com/soluciones/mexico/cafeterias/filas-tiempos-espera-horas-pico-provocan-abandono-antes.html">
+
+  <style>
+    .resources-page main { padding-top: 66px; }
+
+    .article-head {
+      background: #f5f6f8;
+      padding: 34px 0 52px;
+      border-bottom: 1px solid #eceef1;
+    }
+
+    .article-breadcrumbs ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      font-size: 14px;
+      color: #7a7a7a;
+    }
+
+    .article-breadcrumbs li + li {
+      padding-left: 10px;
+    }
+
+    .article-breadcrumbs li + li::before {
+      content: "/";
+      display: inline-block;
+      padding-right: 10px;
+      color: #b0b0b0;
+    }
+
+    .article-breadcrumbs a {
+      color: #6a6a6a;
+    }
+
+    .article-breadcrumbs a:hover {
+      color: var(--heading-color);
+    }
+
+    .article-meta {
+      color: var(--heading-color);
+      font-family: var(--nav-font);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .article-head h1 {
+      color: #3d4d6a;
+      max-width: 1000px;
+      font-size: clamp(36px, 4.5vw, 56px);
+      line-height: 1.08;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .article-deck {
+      max-width: 800px;
+      font-size: 19px;
+      line-height: 1.65;
+      color: #666;
+      margin: 0;
+    }
+
+    .article-section {
+      padding: 60px 0;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 820px);
+      gap: 52px;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .article-toc {
+      position: sticky;
+      top: 105px;
+      background: #f5f6f8;
+      padding: 22px 18px;
+      border-radius: 8px;
+      border-top: 3px solid var(--accent-color);
+    }
+
+    .article-toc strong {
+      display: block;
+      color: #3d4d6a;
+      font-family: var(--heading-font);
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .article-toc a {
+      display: block;
+      color: #666;
+      font-size: 14px;
+      padding: 7px 8px;
+      margin-left: -8px;
+      border-left: 2px solid transparent;
+    }
+
+    .article-toc a:hover {
+      color: var(--heading-color);
+      border-left-color: var(--accent-color);
+    }
+
+    .article-content {
+      color: var(--default-color);
+      font-size: 17px;
+      line-height: 1.82;
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      color: var(--heading-color);
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 42px 0 16px;
+    }
+
+    .article-content section:first-child h2 {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: #3d4d6a;
+      font-size: 22px;
+      font-weight: 650;
+      margin: 28px 0 12px;
+    }
+
+    .article-content p {
+      margin-bottom: 18px;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      padding-left: 1.35rem;
+      margin-bottom: 22px;
+    }
+
+    .article-content li {
+      margin-bottom: 8px;
+    }
+
+    .article-content strong {
+      color: #3d4d6a;
+    }
+
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0 28px;
+      font-size: 15px;
+    }
+
+    .article-content th,
+    .article-content td {
+      border: 1px solid #e0e3e7;
+      padding: 12px 14px;
+      vertical-align: top;
+    }
+
+    .article-content th {
+      background: #f5f6f8;
+      color: #3d4d6a;
+    }
+
+    .demiops-solution {
+      margin-top: 46px;
+      padding: 30px;
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      border-left: 5px solid var(--heading-color);
+    }
+
+    .demiops-solution .solution-label {
+      color: var(--heading-color);
+      font-family: var(--nav-font);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .demiops-solution h2 {
+      color: #3d4d6a;
+      margin: 7px 0 14px;
+    }
+
+    .demiops-solution .solution-button {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--accent-color);
+      color: #fff;
+      padding: 11px 24px;
+      border-radius: 50px;
+      font-family: var(--heading-font);
+      font-weight: 600;
+    }
+
+    .demiops-solution .solution-button:hover {
+      background: var(--heading-color);
+      color: #fff;
+    }
+
+    .availability-note {
+      margin-top: 16px;
+      background: #f5f6f8;
+      border: 1px solid #e4e6e9;
+      border-radius: 8px;
+      padding: 15px 17px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #6d6d6d;
+    }
+
+    .availability-note i {
+      color: var(--heading-color);
+      margin-right: 6px;
+    }
+
+    .article-sources {
+      border-top: 1px solid #e5e5e5;
+      margin-top: 46px;
+      padding-top: 24px;
+    }
+
+    .article-sources h2 {
+      margin-top: 0;
+    }
+
+    .article-sources a {
+      word-break: break-word;
+    }
+
+    .article-cta {
+      background: #3d4d6a;
+      color: #fff;
+      padding: 52px 0;
+    }
+
+    .article-cta h2 {
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .article-cta p {
+      color: rgba(255,255,255,.8);
+      margin: 0;
+    }
+
+    .article-cta .cta-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 50px;
+      background: var(--accent-color);
+      color: #fff;
+      font-family: var(--heading-font);
+      font-weight: 600;
+    }
+
+    .article-cta .cta-btn:hover {
+      background: var(--heading-color);
+      color: #fff;
+    }
+
+    .related-section {
+      background: #f5f6f8;
+    }
+
+    .related-section .section-title {
+      padding-bottom: 38px;
+    }
+
+    .related-card {
+      height: 100%;
+      background: #fff;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 0 25px rgba(0,0,0,.06);
+      border-top: 3px solid transparent;
+      transition: .3s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      border-top-color: var(--accent-color);
+    }
+
+    .related-card .related-meta {
+      color: var(--heading-color);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .related-card h3 {
+      color: #3d4d6a;
+      font-size: 20px;
+      line-height: 1.3;
+      margin: 9px 0 13px;
+    }
+
+    .related-card .read-more {
+      color: var(--heading-color);
+      font-weight: 600;
+    }
+
+    @media (max-width: 1199px) {
+      .resources-page main { padding-top: 60px; }
+    }
+
+    @media (max-width: 991px) {
+      .article-layout { display: block; }
+      .article-toc { display: none; }
+    }
+
+    @media (max-width: 767px) {
+      .article-head { padding: 28px 0 40px; }
+      .article-section { padding: 42px 0; }
+      .demiops-solution { padding: 24px; }
+    }
+  </style>
+
+</head>
+
+<body class="resources-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="/index.html" class="logo d-flex align-items-center me-auto">
+        <img src="/assets/img/logo.png" alt="Demiops">
+        <h1 class="sitename">Demiops</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/index.html#hero">Inicio</a></li>
+          <li><a href="/index.html#about">Nosotros</a></li>
+
+          <li class="dropdown"><a href="/index.html#services"><span>Productos</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/demiops-core.html">Demiops Core</a></li>
+              <li><a href="/demiops-data.html">Demiops Data</a></li>
+              <li><a href="/demiops-intelligence.html">Demiops Intelligence - Operaciones IA</a></li>
+              <li><a href="/modem.html">Modernizacion Empresarial</a></li>
+              <li><a href="/servicios-profesionales.html">Servicios Profesionales</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Tecnologia</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/asistentes-ia.html">Asistentes de Inteligencia Artificial</a></li>
+              <li><a href="/agentes-ia.html">Agentes de Inteligencia Artificial</a></li>
+              <li><a href="/automatizacion-inteligente.html">Automaticazion Inteligente</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/index.html#faq-2">Preguntas Frequentes</a></li>
+
+          <li class="dropdown">
+            <a href="/soluciones/" class="active"><span>Soluciones</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/soluciones/">Problemas y Soluciones para PYMEs</a></li>
+              <li><a href="/assets/doc/Cloud-Hybrida-Demiops.pdf">Caso de Uso - Demiops Core</a></li>
+              <li><a href="/assets/doc/Demiops Intelligence-Demiops.pdf">Caso de Uso - Demiops Intelligence</a></li>
+              <li><a href="/assets/doc/MODEM-Modernizacion-Empresarial-para-PYMEs.pdf">Caso de Uso - MODEM</a></li>
+              <li><a href="/assets/doc/Servicios-Profesionales-Demiops.pdf">Caso de Uso - Servicios Profesionales</a></li>
+              <li><a href="/assets/doc/Asistentes-Inteligentes-para-PyMEs.pdf">Caso de Uso - Asistente de IA</a></li>
+              <li><a href="/assets/doc/Agentes-Inteligentes-para-PyMEs.pdf">Caso de Uso - Agente de IA</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/index.html#contact">Contacto</a></li>
+          <li><a href="/en/index.html" style="color: #f6b26b; font-weight: bold;">EN</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="/index.html#contact">Inicia Ya</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <header class="article-head">
+      <div class="container">
+        <nav class="article-breadcrumbs" aria-label="breadcrumb">
+          <ol>
+            <li><a href="/soluciones/">Soluciones</a></li>
+            <li><a href="/soluciones/?industria=cafeterias">Cafeterías</a></li>
+            <li aria-current="page">México</li>
+          </ol>
+        </nav>
+
+        <div class="article-meta">Cafeterías · México</div>
+        <h1>Cómo reducir las filas y los tiempos de espera en horas pico para evitar que los clientes abandonen la cafetería</h1>
+        
+        <p class="article-deck">En muchas cafeterías de México, especialmente en ubicaciones cercanas a oficinas, colegios o campus universitarios, la hora del almuerzo o el “brunch” de fin de semana se vuelve una auténtica zona de congestión. Las filas en la toma de orden y en la entrega…</p>
+        
+      </div>
+    </header>
+
+    <section class="article-section">
+      <div class="container">
+        <div class="article-layout">
+          <aside class="article-toc" aria-label="Índice del artículo">
+            <strong>En esta página</strong>
+            <a href="#introduccion">Introducción</a>
+            <a href="#como-aparece">Cómo aparece</a>
+            <a href="#senales">Señales</a>
+            <a href="#por-que-ocurre">Por qué ocurre</a>
+            <a href="#impacto">Impacto</a>
+            <a href="#crecer">Al crecer</a>
+            <a href="#controlar">Qué controlar</a>
+            <a href="#solucion">Cómo puede ayudar Demiops</a>
+            <a href="#fuentes">Fuentes</a>
+          </aside>
+
+          <article class="article-content">
+            
+            <section id="introduccion">
+              <h2>Introducción</h2>
+              <p>En muchas cafeterías de México, especialmente en ubicaciones cercanas a oficinas, colegios o campus universitarios, la hora del almuerzo o el “brunch” de fin de semana se vuelve una auténtica zona de congestión. Las filas en la toma de orden y en la entrega de alimentos se alargan tanto que el cliente, al ver que debe esperar más de lo que le habían prometido, decide marcharse sin ordenar. Ese abandono afecta directamente la facturación y la percepción del servicio.</p>
+
+            </section>
+            
+            
+
+            <section id="como-aparece">
+              <h2>Cómo aparece este problema en Cafeterías</h2>
+              <ul>
+<li><strong>Fila en el mostrador de pedidos.</strong> Los clientes llegan con la idea de comprar un café o un combo rápido, pero la falta de personal o la ausencia de un proceso estructurado obliga a esperar varios minutos antes de ser atendidos.</li>
+<li><strong>Demora en la entrega.</strong> Después de ordenar, la preparación y el traslado al mostrador pueden tardar hasta 19 min, según un estudio realizado en la cafetería universitaria del Tecnológico de Estudios Superiores de Valle de Bravo (Fuente 2).</li>
+<li><strong>Tiempo total de consumo insuficiente.</strong> En el mismo estudio, el tiempo total (orden + preparación + consumo) llegó a 37 min, mientras que a los estudiantes se les asigna apenas 15‑20 min, lo que genera frustración y abandono.</li>
+<li><strong>Áreas de atención mal ubicadas.</strong> La disposición del mobiliario y la ubicación de los puntos de toma de orden y entrega de alimentos contribuyen a la formación de cuellos de botella.</li>
+<li><strong>Falta de información al cliente.</strong> Cuando la espera no es visible ni se comunica una estimación, el cliente percibe incertidumbre y prefiere buscar otra opción.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="senales">
+              <h2>Señales de que el negocio tiene este problema</h2>
+              <ol>
+<li><strong>Colas visibles en la entrada</strong> durante los martes (día con mayor saturación según la investigación) y en la zona de entrega.</li>
+<li><strong>Clientes que abandonan la fila</strong> antes de llegar al mostrador de pedidos.</li>
+<li><strong>Aumento de quejas</strong> relacionadas con “tiempo de espera” en encuestas o reseñas en línea.</li>
+<li><strong>Disminución del ticket medio</strong> en la hora pico, a pesar de la alta afluencia de clientes.</li>
+<li><strong>Empleados que hacen “correr” entre la cocina y el mostrador</strong>, indicando una presión operativa innecesaria.</li>
+<li><strong>Inventario de productos críticos (café, pan, pastelería) que se agota rápidamente</strong> porque la demanda no se reparte de forma equilibrada.</li>
+<li><strong>Uso de papel y notas adhesivas</strong> para llevar el control de quién está esperando, lo que genera errores y pérdidas de tiempo.</li>
+</ol>
+
+            </section>
+            
+            
+
+            <section id="por-que-ocurre">
+              <h2>Por qué ocurre</h2>
+              <h3>Operativas</h3>
+<ul>
+<li><strong>Distribución física inadecuada</strong> de los puntos de atención.</li>
+<li><strong>Mise en place incompleto</strong>: la cocina no tiene preparados los productos más demandados antes del pico.</li>
+<li><strong>Número insuficiente de personal</strong> o roles poco claros (quién recibe, quién entrega, quién cobra).</li>
+</ul>
+<h3>Administrativas</h3>
+<ul>
+<li><strong>Falta de un sistema de lista de espera</strong> que registre el orden de llegada y notifique al cliente cuando su turno está próximo.</li>
+<li><strong>Ausencia de estimaciones de tiempo</strong> basadas en datos reales de preparación y entrega.</li>
+</ul>
+<h3>Comerciales</h3>
+<ul>
+<li><strong>Promociones o productos “estrella”</strong> que concentran la demanda en pocos ítems, saturando la línea de producción.</li>
+</ul>
+<h3>Externas</h3>
+<ul>
+<li><strong>Patrones de afluencia</strong> que concentran la mayor parte de los clientes en horarios específicos (martes, viernes tarde, brunch de fin de semana).</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="impacto">
+              <h2>Qué impacto puede tener</h2>
+              <ul>
+<li><strong>Pérdida de ventas</strong>: cada cliente que se marcha representa un ticket que nunca se registra.</li>
+<li><strong>Reducción del ticket medio</strong> porque los clientes que esperan suelen comprar menos.</li>
+<li><strong>Mayor rotación de personal</strong> y mayor riesgo de errores, lo que afecta la calidad del producto.</li>
+<li><strong>Desgaste del personal</strong> y aumento de ausentismo por la presión constante en horas pico.</li>
+<li><strong>Daño a la reputación</strong>: reseñas negativas por largas esperas pueden alejar a futuros clientes.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="crecer">
+              <h2>Por qué se vuelve más difícil al crecer</h2>
+              <ul>
+<li><strong>Más sucursales</strong> implican que el problema se replique en cada punto sin una visión centralizada.</li>
+<li><strong>Aumento del menú</strong> genera mayor complejidad en la preparación y, por tanto, más tiempo de cocina.</li>
+<li><strong>Mayor número de empleados</strong> sin una asignación clara de roles puede generar duplicación de tareas o “vacíos” críticos.</li>
+<li><strong>Incremento de la demanda</strong> sin ajustar la capacidad de la cocina o la cantidad de personal disponible en el mostrador de pedidos.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="controlar">
+              <h2>Qué debería poder saber o controlar el negocio</h2>
+              <ol>
+<li><strong>Tiempo promedio de espera</strong> desde que el cliente llega hasta que recibe su pedido (desglosado por etapa: toma de orden, preparación, entrega).</li>
+<li><strong>Número de clientes en fila</strong> en tiempo real, con una estimación de tiempo de espera para cada uno.</li>
+<li><strong>Patrones de afluencia</strong> por día de la semana y por franja horaria, para anticipar la carga de trabajo.</li>
+<li><strong>Capacidad de personal por zona</strong> (recepción, cocina, entrega) y roles asignados durante la hora pico.</li>
+<li><strong>Disponibilidad de productos críticos</strong> en tiempo real, para evitar que la falta de insumos genere demoras.</li>
+<li><strong>Eficiencia del proceso de cobro</strong>, identificando si el pago automático o la caja manual son cuellos de botella.</li>
+<li><strong>Feedback del cliente</strong> en tiempo real (por ejemplo, a través de una app o pantalla) sobre su percepción del tiempo de espera.</li>
+</ol>
+
+            </section>
+            
+            
+
+            <section id="solucion" class="demiops-solution">
+              <div class="solution-label">Cómo puede ayudar Demiops</div>
+              <h2>Solución Demiops</h2>
+              <p>Esta capacidad permite crear y gestionar una lista de espera digital que registra el orden de llegada de los clientes, muestra estimaciones de tiempo real y envía notificaciones (por SMS, correo o pantalla) cuando la mesa o el pedido está listo. Además, se pueden habilitar reservas anticipadas para horarios de menor afluencia, lo que ayuda a repartir la demanda a lo largo del día. Con la configuración adecuada, la cafetería puede establecer roles claros (un empleado dedicado a recibir, otro a cobrar y otro a entregar) y automatizar la asignación de turnos, reduciendo la incertidumbre que lleva al abandono.</p>
+
+              <a class="solution-button" href="/index.html#contact">Hablar con Demiops</a>
+            </section>
+            
+
+            <div class="availability-note">
+              <i class="bi bi-info-circle"></i>
+              <strong>Nota sobre disponibilidad:</strong>
+              Las funciones descritas pueden variar según la configuración, versión, país, industria y necesidades específicas de cada negocio.
+              Algunas capacidades pueden requerir configuración, adaptación o desarrollo adicional y pueden incorporarse en versiones futuras de la solución.
+            </div>
+            
+
+            <section id="cierre">
+              <h2>Cierre</h2>
+              <p>Las filas y los tiempos de espera en horas pico son una fuente de pérdida de ventas y de deterioro de la experiencia del cliente en las cafeterías mexicanas. Identificar las señales de alerta, comprender las causas y medir los indicadores clave son pasos indispensables para tomar decisiones acertadas. Implementar una herramienta de <strong>Citas y reservaciones</strong> brinda al negocio la posibilidad de visibilizar y controlar la espera, equilibrar la carga de trabajo y, en última instancia, disminuir el abandono antes de ordenar.</p>
+
+            </section>
+            
+
+            
+            <section id="fuentes" class="article-sources">
+              <h2>Fuentes consultadas</h2>
+              <ol>
+                
+                <li>
+                  
+                  <a href="https://ciencialatina.org/index.php/cienciala/article/view/12470" target="_blank" rel="nofollow noopener">Ciencias Administrativas y Finanzas, Estrategia de Reducción de Tiempos y Mejora en la Logística en una Cafetería Universitaria</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="https://salesgrowthsteps.com/es/articulos/estrategia-horas-pico" target="_blank" rel="nofollow noopener">Dominar las horas pico: cómo restaurantes y cafeterías sacan más partido al lleno</a>
+                  
+                </li>
+                
+              </ol>
+            </section>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-cta">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h2>¿Tu negocio enfrenta este problema?</h2>
+            <p>Demiops puede adaptar una solución a la forma en que opera tu empresa.</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <a class="cta-btn" href="/index.html#contact">Contáctanos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="related-section section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Problemas Relacionados</h2>
+        </div>
+
+        <div class="row gy-4">
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Cafeterías · México</div>
+              <h3>Volatilidad del costo del café, leche, cacao y otros insumos: cómo afecta el margen de tus bebidas en las cafeterías mexicanas</h3>
+              <a class="read-more" href="/soluciones/mexico/cafeterias/volatilidad-costo-cafe-leche-cacao-otros-insumos-cambia.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Cafeterías · México</div>
+              <h3>Merma de leche, panadería y alimentos preparados: por qué no se refleja en el costo de venta de tu cafetería</h3>
+              <a class="read-more" href="/soluciones/mexico/cafeterias/merma-leche-panaderia-alimentos-preparados-no-refleja-precision.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Cafeterías · México</div>
+              <h3>Dificultad para pronosticar la demanda por franja horaria, clima, día de la semana y ubicación en cafeterías mexicanas</h3>
+              <a class="read-more" href="/soluciones/mexico/cafeterias/dificultad-pronosticar-demanda-franja-horaria-clima-dia-semana.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+  </main>
+<footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Unete A Nuestra Lista de Correo</h4>
+            <p>Suscribete a nuestra lista de correo para recibir las ultimas noticias sobre productos y servicios
+              Demiops!</p>
+            <form
+              action="https://docs.google.com/forms/d/e/1FAIpQLSdp3P4VUMDW5lahOkjoAm0iMS6a3mKbym6rhSJwNBwQsTW5kw/formResponse"
+              method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="entry.1045781291"><input type="submit"
+                  value="Suscribete"></div>
+              <div class="loading">Cargando</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Tu suscripcion fue recibida. Muchas Gracias!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="/index.html" class="d-flex align-items-center">
+            <span class="sitename">Demiops</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>11201 N Tatum Blvd #300</p>
+            <p>Phoenix, AZ 85028</p>
+            <p class="mt-3"><strong>Telefono:</strong> <span>+1 480 331 9210</span></p>
+            <p><strong>Email:</strong> <span>info@demiops.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Ligas Utiles</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Sobre Nosotros</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/terminos.html">Terminos de Servicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/privacidad.html">Politica de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Productos y Servicios</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-core.html">Demiops Core</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-data.html">Demiops Data</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-intelligence.html">Demiops Intelligence</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/modem.html">ModEm - Modernizacion Empresarial</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/servicios-profesionales.html">Servicios Profesionales</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Siguenos</h4>
+          <p>Contactanos por cualquiera de nuestras redes sociales.</p>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/demiops"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/demiopsinc"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com/company/demiops"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Demiops, Inc.</strong> <span>Todos Los Derechos
+          Reservados</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+
+</body>
+</html>

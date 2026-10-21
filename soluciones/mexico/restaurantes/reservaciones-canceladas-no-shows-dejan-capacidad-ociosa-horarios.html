@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Reservaciones canceladas o no‑shows que dejan mesas vacías en horarios pico | Demiops</title>
+  <meta name="description" content="En un restaurante de México, una mesa que queda vacía en la cena de viernes o en una fecha especial no solo significa “un asiento libre”. Es una pérdida…">
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+  <link rel="canonical" href="https://demiops.com/soluciones/mexico/restaurantes/reservaciones-canceladas-no-shows-dejan-capacidad-ociosa-horarios.html">
+
+  <style>
+    .resources-page main { padding-top: 66px; }
+
+    .article-head {
+      background: #f5f6f8;
+      padding: 34px 0 52px;
+      border-bottom: 1px solid #eceef1;
+    }
+
+    .article-breadcrumbs ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      font-size: 14px;
+      color: #7a7a7a;
+    }
+
+    .article-breadcrumbs li + li {
+      padding-left: 10px;
+    }
+
+    .article-breadcrumbs li + li::before {
+      content: "/";
+      display: inline-block;
+      padding-right: 10px;
+      color: #b0b0b0;
+    }
+
+    .article-breadcrumbs a {
+      color: #6a6a6a;
+    }
+
+    .article-breadcrumbs a:hover {
+      color: var(--heading-color);
+    }
+
+    .article-meta {
+      color: var(--heading-color);
+      font-family: var(--nav-font);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .article-head h1 {
+      color: #3d4d6a;
+      max-width: 1000px;
+      font-size: clamp(36px, 4.5vw, 56px);
+      line-height: 1.08;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .article-deck {
+      max-width: 800px;
+      font-size: 19px;
+      line-height: 1.65;
+      color: #666;
+      margin: 0;
+    }
+
+    .article-section {
+      padding: 60px 0;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 820px);
+      gap: 52px;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .article-toc {
+      position: sticky;
+      top: 105px;
+      background: #f5f6f8;
+      padding: 22px 18px;
+      border-radius: 8px;
+      border-top: 3px solid var(--accent-color);
+    }
+
+    .article-toc strong {
+      display: block;
+      color: #3d4d6a;
+      font-family: var(--heading-font);
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .article-toc a {
+      display: block;
+      color: #666;
+      font-size: 14px;
+      padding: 7px 8px;
+      margin-left: -8px;
+      border-left: 2px solid transparent;
+    }
+
+    .article-toc a:hover {
+      color: var(--heading-color);
+      border-left-color: var(--accent-color);
+    }
+
+    .article-content {
+      color: var(--default-color);
+      font-size: 17px;
+      line-height: 1.82;
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      color: var(--heading-color);
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 42px 0 16px;
+    }
+
+    .article-content section:first-child h2 {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: #3d4d6a;
+      font-size: 22px;
+      font-weight: 650;
+      margin: 28px 0 12px;
+    }
+
+    .article-content p {
+      margin-bottom: 18px;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      padding-left: 1.35rem;
+      margin-bottom: 22px;
+    }
+
+    .article-content li {
+      margin-bottom: 8px;
+    }
+
+    .article-content strong {
+      color: #3d4d6a;
+    }
+
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0 28px;
+      font-size: 15px;
+    }
+
+    .article-content th,
+    .article-content td {
+      border: 1px solid #e0e3e7;
+      padding: 12px 14px;
+      vertical-align: top;
+    }
+
+    .article-content th {
+      background: #f5f6f8;
+      color: #3d4d6a;
+    }
+
+    .demiops-solution {
+      margin-top: 46px;
+      padding: 30px;
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      border-left: 5px solid var(--heading-color);
+    }
+
+    .demiops-solution .solution-label {
+      color: var(--heading-color);
+      font-family: var(--nav-font);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .demiops-solution h2 {
+      color: #3d4d6a;
+      margin: 7px 0 14px;
+    }
+
+    .demiops-solution .solution-button {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--accent-color);
+      color: #fff;
+      padding: 11px 24px;
+      border-radius: 50px;
+      font-family: var(--heading-font);
+      font-weight: 600;
+    }
+
+    .demiops-solution .solution-button:hover {
+      background: var(--heading-color);
+      color: #fff;
+    }
+
+    .availability-note {
+      margin-top: 16px;
+      background: #f5f6f8;
+      border: 1px solid #e4e6e9;
+      border-radius: 8px;
+      padding: 15px 17px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #6d6d6d;
+    }
+
+    .availability-note i {
+      color: var(--heading-color);
+      margin-right: 6px;
+    }
+
+    .article-sources {
+      border-top: 1px solid #e5e5e5;
+      margin-top: 46px;
+      padding-top: 24px;
+    }
+
+    .article-sources h2 {
+      margin-top: 0;
+    }
+
+    .article-sources a {
+      word-break: break-word;
+    }
+
+    .article-cta {
+      background: #3d4d6a;
+      color: #fff;
+      padding: 52px 0;
+    }
+
+    .article-cta h2 {
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .article-cta p {
+      color: rgba(255,255,255,.8);
+      margin: 0;
+    }
+
+    .article-cta .cta-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 50px;
+      background: var(--accent-color);
+      color: #fff;
+      font-family: var(--heading-font);
+      font-weight: 600;
+    }
+
+    .article-cta .cta-btn:hover {
+      background: var(--heading-color);
+      color: #fff;
+    }
+
+    .related-section {
+      background: #f5f6f8;
+    }
+
+    .related-section .section-title {
+      padding-bottom: 38px;
+    }
+
+    .related-card {
+      height: 100%;
+      background: #fff;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 0 25px rgba(0,0,0,.06);
+      border-top: 3px solid transparent;
+      transition: .3s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      border-top-color: var(--accent-color);
+    }
+
+    .related-card .related-meta {
+      color: var(--heading-color);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .related-card h3 {
+      color: #3d4d6a;
+      font-size: 20px;
+      line-height: 1.3;
+      margin: 9px 0 13px;
+    }
+
+    .related-card .read-more {
+      color: var(--heading-color);
+      font-weight: 600;
+    }
+
+    @media (max-width: 1199px) {
+      .resources-page main { padding-top: 60px; }
+    }
+
+    @media (max-width: 991px) {
+      .article-layout { display: block; }
+      .article-toc { display: none; }
+    }
+
+    @media (max-width: 767px) {
+      .article-head { padding: 28px 0 40px; }
+      .article-section { padding: 42px 0; }
+      .demiops-solution { padding: 24px; }
+    }
+  </style>
+
+</head>
+
+<body class="resources-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="/index.html" class="logo d-flex align-items-center me-auto">
+        <img src="/assets/img/logo.png" alt="Demiops">
+        <h1 class="sitename">Demiops</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/index.html#hero">Inicio</a></li>
+          <li><a href="/index.html#about">Nosotros</a></li>
+
+          <li class="dropdown"><a href="/index.html#services"><span>Productos</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/demiops-core.html">Demiops Core</a></li>
+              <li><a href="/demiops-data.html">Demiops Data</a></li>
+              <li><a href="/demiops-intelligence.html">Demiops Intelligence - Operaciones IA</a></li>
+              <li><a href="/modem.html">Modernizacion Empresarial</a></li>
+              <li><a href="/servicios-profesionales.html">Servicios Profesionales</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Tecnologia</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/asistentes-ia.html">Asistentes de Inteligencia Artificial</a></li>
+              <li><a href="/agentes-ia.html">Agentes de Inteligencia Artificial</a></li>
+              <li><a href="/automatizacion-inteligente.html">Automaticazion Inteligente</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/index.html#faq-2">Preguntas Frequentes</a></li>
+
+          <li class="dropdown">
+            <a href="/soluciones/" class="active"><span>Soluciones</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/soluciones/">Problemas y Soluciones para PYMEs</a></li>
+              <li><a href="/assets/doc/Cloud-Hybrida-Demiops.pdf">Caso de Uso - Demiops Core</a></li>
+              <li><a href="/assets/doc/Demiops Intelligence-Demiops.pdf">Caso de Uso - Demiops Intelligence</a></li>
+              <li><a href="/assets/doc/MODEM-Modernizacion-Empresarial-para-PYMEs.pdf">Caso de Uso - MODEM</a></li>
+              <li><a href="/assets/doc/Servicios-Profesionales-Demiops.pdf">Caso de Uso - Servicios Profesionales</a></li>
+              <li><a href="/assets/doc/Asistentes-Inteligentes-para-PyMEs.pdf">Caso de Uso - Asistente de IA</a></li>
+              <li><a href="/assets/doc/Agentes-Inteligentes-para-PyMEs.pdf">Caso de Uso - Agente de IA</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/index.html#contact">Contacto</a></li>
+          <li><a href="/en/index.html" style="color: #f6b26b; font-weight: bold;">EN</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="/index.html#contact">Inicia Ya</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <header class="article-head">
+      <div class="container">
+        <nav class="article-breadcrumbs" aria-label="breadcrumb">
+          <ol>
+            <li><a href="/soluciones/">Soluciones</a></li>
+            <li><a href="/soluciones/?industria=restaurantes">Restaurantes</a></li>
+            <li aria-current="page">México</li>
+          </ol>
+        </nav>
+
+        <div class="article-meta">Restaurantes · México</div>
+        <h1>Reservaciones canceladas o no‑shows que dejan mesas vacías en horarios pico</h1>
+        
+        <p class="article-deck">En un restaurante de México, una mesa que queda vacía en la cena de viernes o en una fecha especial no solo significa “un asiento libre”. Es una pérdida directa de ingresos, de personal y de la oportunidad de atender a otro comensal que estaba dispuesto a…</p>
+        
+      </div>
+    </header>
+
+    <section class="article-section">
+      <div class="container">
+        <div class="article-layout">
+          <aside class="article-toc" aria-label="Índice del artículo">
+            <strong>En esta página</strong>
+            <a href="#introduccion">Introducción</a>
+            <a href="#como-aparece">Cómo aparece</a>
+            <a href="#senales">Señales</a>
+            <a href="#por-que-ocurre">Por qué ocurre</a>
+            <a href="#impacto">Impacto</a>
+            <a href="#crecer">Al crecer</a>
+            <a href="#controlar">Qué controlar</a>
+            <a href="#solucion">Cómo puede ayudar Demiops</a>
+            <a href="#fuentes">Fuentes</a>
+          </aside>
+
+          <article class="article-content">
+            
+            <section id="introduccion">
+              <h2>Introducción</h2>
+              <p>En un restaurante de México, una mesa que queda vacía en la cena de viernes o en una fecha especial no solo significa “un asiento libre”. Es una pérdida directa de ingresos, de personal y de la oportunidad de atender a otro comensal que estaba dispuesto a pagar. Cuando esas ausencias ocurren de forma recurrente, la capacidad ociosa se vuelve un problema de rentabilidad que afecta a cualquier establecimiento, desde un bistró de la colonia Roma hasta una casa de alta cocina en Polanco.</p>
+
+            </section>
+            
+            
+
+            <section id="como-aparece">
+              <h2>Cómo aparece este problema en Restaurantes</h2>
+              <p>Imagina que a las 20:00 h tienes una reservación para ocho personas en tu salón de fine‑dining. El mise‑en‑place está listo, el sommelier asignado y la mesa está marcada como ocupada en el sistema. A las 20:15 h el cliente no llega, no avisa y la “ventana de gracia” expira. El personal sigue trabajando en esa mesa, mientras otras familias esperan en la barra. Cuando la hora de la segunda vuelta llega, esa mesa sigue vacía y el restaurante ya no puede atender a los clientes que sí aparecen, porque el calendario está bloqueado por una reserva que nunca se materializó.</p>
+<p>En la práctica, el problema se manifiesta en:</p>
+<ul>
+<li><strong>Mise‑en‑place desperdiciado</strong> (ingredientes preparados para platos que no se servirán).</li>
+<li><strong>Personal sobre‑asignado</strong> (cocineros, meseros y sommeliers preparados para un número mayor de comensales).</li>
+<li><strong>Calendario bloqueado</strong> que impide aceptar walk‑ins o reservas de última hora.</li>
+<li><strong>Impacto en la percepción del cliente</strong> cuando ve mesas vacías en el salón y asume que el restaurante está poco concurrido.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="senales">
+              <h2>Señales de que el negocio tiene este problema</h2>
+              <ol>
+<li><strong>Mesas marcadas como “reservadas” que nunca se convierten en “ocupadas”</strong> en el reporte de turnos.</li>
+<li><strong>Alta frecuencia de mesas vacías en horarios de alta demanda</strong> (viernes‑sábado, cenas y fechas especiales).</li>
+<li><strong>Personal que termina su turno sin haber atendido la cantidad de comensales esperada</strong> según la planificación de cubrimiento.</li>
+<li><strong>Desperdicio de ingredientes</strong> registrado en el inventario al final del día, sin una orden de venta asociada.</li>
+<li><strong>Clientes que preguntan por disponibilidad y reciben “no hay mesas”</strong> aunque el salón esté medio vacío.</li>
+<li><strong>Variación inexplicable del ticket promedio</strong> en los días con más no‑shows.</li>
+<li><strong>Quejas internas del staff</strong> por “estar esperando a una mesa que nunca llega”.</li>
+</ol>
+
+            </section>
+            
+            
+
+            <section id="por-que-ocurre">
+              <h2>Por qué ocurre</h2>
+              <h3>Operativas</h3>
+<ul>
+<li>Falta de un <strong>sistema único de reservas</strong>: la información circula entre libretas, mensajes de WhatsApp, Instagram y el celular del gerente, lo que dificulta el seguimiento. (Fuente 3)</li>
+<li>No se establecen <strong>ventanas de tolerancia</strong>: si el cliente no llega a los 15‑20 min, la mesa sigue bloqueada.</li>
+</ul>
+<h3>Administrativas</h3>
+<ul>
+<li>Políticas de cancelación poco claras o inexistentes. La mayoría de los clientes no avisan porque “no hay penalización”. (Fuente 1)</li>
+<li>No se exige <strong>teléfono o datos de contacto</strong> al registrar la reserva, lo que impide enviar recordatorios. (Fuente 3)</li>
+</ul>
+<h3>Comerciales</h3>
+<ul>
+<li>Se permite <strong>sobre‑venta</strong> sin conocer la tasa real de no‑shows por día y horario. (Fuente 3)</li>
+<li>Falta de <strong>listado de espera activo</strong> que permita re‑asignar mesas rápidamente.</li>
+</ul>
+<h3>Externas</h3>
+<ul>
+<li>Cultura local que no penaliza la falta de aviso (a diferencia de EE. UU. o Europa). (Fuente 1)</li>
+<li>Eventos o cambios de planes de última hora que los clientes consideran “normales”.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="impacto">
+              <h2>Qué impacto puede tener</h2>
+              <ul>
+<li><strong>Ingresos directos perdidos</strong>: un ticket promedio de 1,800 MXN por persona y una mesa de cuatro sin‑show equivale a 7,200 MXN de venta no realizada. Dos no‑shows por semana en temporada regular pueden superar los 700,000 MXN al año. (Fuente 1)</li>
+<li><strong>Costos de mise‑en‑place</strong>: entre 15‑25 % del ingreso esperado se pierde en alimentos preparados que no se sirven. (Fuente 1)</li>
+<li><strong>Costo de oportunidad</strong>: mesas bloqueadas impiden atender a clientes que sí llegan, reduciendo la facturación potencial. (Fuente 1)</li>
+<li><strong>Sobrecosto de personal</strong>: en fine‑dining la relación personal/comensal es alta; un no‑show genera horas de trabajo no remuneradas por servicio. (Fuente 1)</li>
+<li><strong>Erosión de la experiencia</strong>: mesas vacías hacen que el salón parezca poco concurrido, lo que puede afectar la percepción de calidad.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="crecer">
+              <h2>Por qué se vuelve más difícil al crecer</h2>
+              <ul>
+<li><strong>Múltiples sucursales</strong>: sin una herramienta centralizada, cada local mantiene su propio registro y la visión global de no‑shows se pierde.</li>
+<li><strong>Mayor número de empleados</strong>: coordinar a más meseros y cocineros requiere datos precisos y en tiempo real.</li>
+<li><strong>Canales de reserva diversificados</strong> (teléfono, app, redes sociales) aumentan la complejidad de consolidar la información.</li>
+<li><strong>Mayor variedad de menús y precios</strong>: el costo de los insumos varía, lo que hace que el desperdicio sea más costoso.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="controlar">
+              <h2>Qué debería poder saber o controlar el negocio</h2>
+              <ol>
+<li><strong>Número total de reservas vs. reservas efectivas</strong> por día y por franja horaria.</li>
+<li><strong>Tasa de no‑show</strong> segmentada por tipo de cliente, tamaño de grupo y canal de reserva.</li>
+<li><strong>Tiempo medio de respuesta</strong> a un no‑show (cuándo se libera la mesa).</li>
+<li><strong>Lista de espera activa</strong> con contactos y prioridad.</li>
+<li><strong>Costos de mise‑en‑place</strong> asociados a cada mesa o menú reservado.</li>
+<li><strong>Alertas automáticas</strong> cuando una reserva no se confirma o no se presenta.</li>
+<li><strong>Política de retención o depósito</strong> aplicada y su efecto en la reducción de no‑shows.</li>
+</ol>
+
+            </section>
+            
+            
+
+            <section id="solucion" class="demiops-solution">
+              <div class="solution-label">Cómo puede ayudar Demiops</div>
+              <h2>Solución Demiops</h2>
+              <p>Esta funcionalidad permite centralizar todas las reservas en un único sistema, registrar datos obligatorios (teléfono, número de personas, canal de origen), definir reglas de confirmación escalonada, enviar recordatorios automáticos y establecer una ventana de tolerancia para liberar la mesa. Además, se pueden crear listas de espera y aplicar retenciones o depósitos según la política del restaurante, lo que ha demostrado reducir los no‑shows en un 50 % (Fuente 2). La configuración incluye:</p>
+<ul>
+<li><strong>Campos obligatorios</strong> (teléfono, tamaño de grupo, evento).</li>
+<li><strong>Flujos de notificación</strong>: confirmación inmediata, recordatorio 48 h antes, recordatorio el día de la reserva y alerta al staff si no hay respuesta.</li>
+<li><strong>Reglas de liberación automática</strong> después de 15‑20 min sin llegada.</li>
+<li><strong>Integración con lista de espera</strong> para reasignar mesas en tiempo real.</li>
+<li><strong>Opcional: retención de tarjeta o depósito</strong> como garantía.</li>
+</ul>
+
+              <a class="solution-button" href="/index.html#contact">Hablar con Demiops</a>
+            </section>
+            
+
+            <div class="availability-note">
+              <i class="bi bi-info-circle"></i>
+              <strong>Nota sobre disponibilidad:</strong>
+              Las funciones descritas pueden variar según la configuración, versión, país, industria y necesidades específicas de cada negocio.
+              Algunas capacidades pueden requerir configuración, adaptación o desarrollo adicional y pueden incorporarse en versiones futuras de la solución.
+            </div>
+            
+
+            <section id="cierre">
+              <h2>Cierre</h2>
+              <p>Los no‑shows en horarios de alta demanda convierten la capacidad ociosa en una fuga de ingresos que afecta tanto el margen como la experiencia del cliente. Para combatirlo, el negocio necesita datos claros sobre reservas, confirmaciones y cancelaciones, así como mecanismos automáticos que liberen mesas y ofrezcan alternativas (lista de espera, retenciones). La capacidad <strong>CITAS Y RESERVACIONES</strong> brinda esa base tecnológica: centraliza la información, automatiza la comunicación y permite aplicar políticas de garantía sin romper la experiencia de reserva. Con ella, el restaurante puede anticipar y mitigar la pérdida de capacidad antes de que se convierta en un problema financiero recurrente.</p>
+
+            </section>
+            
+
+            
+            <section id="fuentes" class="article-sources">
+              <h2>Fuentes consultadas</h2>
+              <ol>
+                
+                <li>
+                  
+                  <a href="https://kavasoft.app/blog/reservas-no-show-soluciones" target="_blank" rel="nofollow noopener">Kavasoft. No-shows en reservaciones: soluciones para restaurantes</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="https://geekandlife.com.mx/2025/10/21/opentable-revela-el-impacto-oculto-de-los-no-shows-en-restaurantes-mexicanos/" target="_blank" rel="nofollow noopener">GeekandLife. OpenTable revela el impacto oculto de los “no-shows” en restaurantes mexicanos</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="https://taro.com.mx/blog/reservaciones-no-shows-bajar-hueco-en-la-mesa" target="_blank" rel="nofollow noopener">Taro. Reservaciones y no-shows: cómo bajar el hueco en la mesa</a>
+                  
+                </li>
+                
+              </ol>
+            </section>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-cta">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h2>¿Tu negocio enfrenta este problema?</h2>
+            <p>Demiops puede adaptar una solución a la forma en que opera tu empresa.</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <a class="cta-btn" href="/index.html#contact">Contáctanos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="related-section section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Problemas Relacionados</h2>
+        </div>
+
+        <div class="row gy-4">
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Restaurantes · México</div>
+              <h3>Margen bajo presión: cómo enfrentar los aumentos simultáneos de insumos, energía, renta y logística en restaurantes mexicanos</h3>
+              <a class="read-more" href="/soluciones/mexico/restaurantes/compresion-margen-aumentos-simultaneos-insumos-energia-renta-logistica.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Restaurantes · México</div>
+              <h3>Diferencias entre ventas de caja, terminales, efectivo y plataformas de entrega al cierre del día en restaurantes mexicanos</h3>
+              <a class="read-more" href="/soluciones/mexico/restaurantes/diferencias-ventas-caja-terminales-efectivo-plataformas-entrega-cierre.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Restaurantes · México</div>
+              <h3>Promociones que aumentan el volumen de ventas pero reducen el margen de contribución en restaurantes de México</h3>
+              <a class="read-more" href="/soluciones/mexico/restaurantes/promociones-aumentan-volumen-ventas-pero-reducen-margen-contribucion.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+  </main>
+<footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Unete A Nuestra Lista de Correo</h4>
+            <p>Suscribete a nuestra lista de correo para recibir las ultimas noticias sobre productos y servicios
+              Demiops!</p>
+            <form
+              action="https://docs.google.com/forms/d/e/1FAIpQLSdp3P4VUMDW5lahOkjoAm0iMS6a3mKbym6rhSJwNBwQsTW5kw/formResponse"
+              method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="entry.1045781291"><input type="submit"
+                  value="Suscribete"></div>
+              <div class="loading">Cargando</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Tu suscripcion fue recibida. Muchas Gracias!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="/index.html" class="d-flex align-items-center">
+            <span class="sitename">Demiops</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>11201 N Tatum Blvd #300</p>
+            <p>Phoenix, AZ 85028</p>
+            <p class="mt-3"><strong>Telefono:</strong> <span>+1 480 331 9210</span></p>
+            <p><strong>Email:</strong> <span>info@demiops.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Ligas Utiles</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Sobre Nosotros</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/terminos.html">Terminos de Servicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/privacidad.html">Politica de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Productos y Servicios</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-core.html">Demiops Core</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-data.html">Demiops Data</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-intelligence.html">Demiops Intelligence</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/modem.html">ModEm - Modernizacion Empresarial</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/servicios-profesionales.html">Servicios Profesionales</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Siguenos</h4>
+          <p>Contactanos por cualquiera de nuestras redes sociales.</p>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/demiops"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/demiopsinc"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com/company/demiops"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Demiops, Inc.</strong> <span>Todos Los Derechos
+          Reservados</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+
+</body>
+</html>
