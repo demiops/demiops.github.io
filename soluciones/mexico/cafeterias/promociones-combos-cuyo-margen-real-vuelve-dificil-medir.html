@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Promociones y combos en cafeterías mexicanas: cómo medir el margen real cuando los productos tienen costos diferentes | Demiops</title>
+  <meta name="description" content="En una cafetería es habitual crear combos — café + pan dulce, cappuccino + sándwich, latte + postre + jugos — para impulsar el ticket promedio y atraer…">
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+  <link rel="canonical" href="https://demiops.com/soluciones/mexico/cafeterias/promociones-combos-cuyo-margen-real-vuelve-dificil-medir.html">
+
+  <style>
+    .resources-page main { padding-top: 66px; }
+
+    .article-head {
+      background: #f5f6f8;
+      padding: 34px 0 52px;
+      border-bottom: 1px solid #eceef1;
+    }
+
+    .article-breadcrumbs ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      font-size: 14px;
+      color: #7a7a7a;
+    }
+
+    .article-breadcrumbs li + li {
+      padding-left: 10px;
+    }
+
+    .article-breadcrumbs li + li::before {
+      content: "/";
+      display: inline-block;
+      padding-right: 10px;
+      color: #b0b0b0;
+    }
+
+    .article-breadcrumbs a {
+      color: #6a6a6a;
+    }
+
+    .article-breadcrumbs a:hover {
+      color: var(--heading-color);
+    }
+
+    .article-meta {
+      color: var(--heading-color);
+      font-family: var(--nav-font);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .article-head h1 {
+      color: #3d4d6a;
+      max-width: 1000px;
+      font-size: clamp(36px, 4.5vw, 56px);
+      line-height: 1.08;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .article-deck {
+      max-width: 800px;
+      font-size: 19px;
+      line-height: 1.65;
+      color: #666;
+      margin: 0;
+    }
+
+    .article-section {
+      padding: 60px 0;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 820px);
+      gap: 52px;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .article-toc {
+      position: sticky;
+      top: 105px;
+      background: #f5f6f8;
+      padding: 22px 18px;
+      border-radius: 8px;
+      border-top: 3px solid var(--accent-color);
+    }
+
+    .article-toc strong {
+      display: block;
+      color: #3d4d6a;
+      font-family: var(--heading-font);
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .article-toc a {
+      display: block;
+      color: #666;
+      font-size: 14px;
+      padding: 7px 8px;
+      margin-left: -8px;
+      border-left: 2px solid transparent;
+    }
+
+    .article-toc a:hover {
+      color: var(--heading-color);
+      border-left-color: var(--accent-color);
+    }
+
+    .article-content {
+      color: var(--default-color);
+      font-size: 17px;
+      line-height: 1.82;
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      color: var(--heading-color);
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 42px 0 16px;
+    }
+
+    .article-content section:first-child h2 {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: #3d4d6a;
+      font-size: 22px;
+      font-weight: 650;
+      margin: 28px 0 12px;
+    }
+
+    .article-content p {
+      margin-bottom: 18px;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      padding-left: 1.35rem;
+      margin-bottom: 22px;
+    }
+
+    .article-content li {
+      margin-bottom: 8px;
+    }
+
+    .article-content strong {
+      color: #3d4d6a;
+    }
+
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0 28px;
+      font-size: 15px;
+    }
+
+    .article-content th,
+    .article-content td {
+      border: 1px solid #e0e3e7;
+      padding: 12px 14px;
+      vertical-align: top;
+    }
+
+    .article-content th {
+      background: #f5f6f8;
+      color: #3d4d6a;
+    }
+
+    .demiops-solution {
+      margin-top: 46px;
+      padding: 30px;
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      border-left: 5px solid var(--heading-color);
+    }
+
+    .demiops-solution .solution-label {
+      color: var(--heading-color);
+      font-family: var(--nav-font);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .demiops-solution h2 {
+      color: #3d4d6a;
+      margin: 7px 0 14px;
+    }
+
+    .demiops-solution .solution-button {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--accent-color);
+      color: #fff;
+      padding: 11px 24px;
+      border-radius: 50px;
+      font-family: var(--heading-font);
+      font-weight: 600;
+    }
+
+    .demiops-solution .solution-button:hover {
+      background: var(--heading-color);
+      color: #fff;
+    }
+
+    .availability-note {
+      margin-top: 16px;
+      background: #f5f6f8;
+      border: 1px solid #e4e6e9;
+      border-radius: 8px;
+      padding: 15px 17px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #6d6d6d;
+    }
+
+    .availability-note i {
+      color: var(--heading-color);
+      margin-right: 6px;
+    }
+
+    .article-sources {
+      border-top: 1px solid #e5e5e5;
+      margin-top: 46px;
+      padding-top: 24px;
+    }
+
+    .article-sources h2 {
+      margin-top: 0;
+    }
+
+    .article-sources a {
+      word-break: break-word;
+    }
+
+    .article-cta {
+      background: #3d4d6a;
+      color: #fff;
+      padding: 52px 0;
+    }
+
+    .article-cta h2 {
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .article-cta p {
+      color: rgba(255,255,255,.8);
+      margin: 0;
+    }
+
+    .article-cta .cta-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 50px;
+      background: var(--accent-color);
+      color: #fff;
+      font-family: var(--heading-font);
+      font-weight: 600;
+    }
+
+    .article-cta .cta-btn:hover {
+      background: var(--heading-color);
+      color: #fff;
+    }
+
+    .related-section {
+      background: #f5f6f8;
+    }
+
+    .related-section .section-title {
+      padding-bottom: 38px;
+    }
+
+    .related-card {
+      height: 100%;
+      background: #fff;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 0 25px rgba(0,0,0,.06);
+      border-top: 3px solid transparent;
+      transition: .3s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      border-top-color: var(--accent-color);
+    }
+
+    .related-card .related-meta {
+      color: var(--heading-color);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .related-card h3 {
+      color: #3d4d6a;
+      font-size: 20px;
+      line-height: 1.3;
+      margin: 9px 0 13px;
+    }
+
+    .related-card .read-more {
+      color: var(--heading-color);
+      font-weight: 600;
+    }
+
+    @media (max-width: 1199px) {
+      .resources-page main { padding-top: 60px; }
+    }
+
+    @media (max-width: 991px) {
+      .article-layout { display: block; }
+      .article-toc { display: none; }
+    }
+
+    @media (max-width: 767px) {
+      .article-head { padding: 28px 0 40px; }
+      .article-section { padding: 42px 0; }
+      .demiops-solution { padding: 24px; }
+    }
+  </style>
+
+</head>
+
+<body class="resources-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="/index.html" class="logo d-flex align-items-center me-auto">
+        <img src="/assets/img/logo.png" alt="Demiops">
+        <h1 class="sitename">Demiops</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/index.html#hero">Inicio</a></li>
+          <li><a href="/index.html#about">Nosotros</a></li>
+
+          <li class="dropdown"><a href="/index.html#services"><span>Productos</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/demiops-core.html">Demiops Core</a></li>
+              <li><a href="/demiops-data.html">Demiops Data</a></li>
+              <li><a href="/demiops-intelligence.html">Demiops Intelligence - Operaciones IA</a></li>
+              <li><a href="/modem.html">Modernizacion Empresarial</a></li>
+              <li><a href="/servicios-profesionales.html">Servicios Profesionales</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Tecnologia</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/asistentes-ia.html">Asistentes de Inteligencia Artificial</a></li>
+              <li><a href="/agentes-ia.html">Agentes de Inteligencia Artificial</a></li>
+              <li><a href="/automatizacion-inteligente.html">Automaticazion Inteligente</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/index.html#faq-2">Preguntas Frequentes</a></li>
+
+          <li class="dropdown">
+            <a href="/soluciones/" class="active"><span>Soluciones</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/soluciones/">Problemas y Soluciones para PYMEs</a></li>
+              <li><a href="/assets/doc/Cloud-Hybrida-Demiops.pdf">Caso de Uso - Demiops Core</a></li>
+              <li><a href="/assets/doc/Demiops Intelligence-Demiops.pdf">Caso de Uso - Demiops Intelligence</a></li>
+              <li><a href="/assets/doc/MODEM-Modernizacion-Empresarial-para-PYMEs.pdf">Caso de Uso - MODEM</a></li>
+              <li><a href="/assets/doc/Servicios-Profesionales-Demiops.pdf">Caso de Uso - Servicios Profesionales</a></li>
+              <li><a href="/assets/doc/Asistentes-Inteligentes-para-PyMEs.pdf">Caso de Uso - Asistente de IA</a></li>
+              <li><a href="/assets/doc/Agentes-Inteligentes-para-PyMEs.pdf">Caso de Uso - Agente de IA</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/index.html#contact">Contacto</a></li>
+          <li><a href="/en/index.html" style="color: #f6b26b; font-weight: bold;">EN</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="/index.html#contact">Inicia Ya</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <header class="article-head">
+      <div class="container">
+        <nav class="article-breadcrumbs" aria-label="breadcrumb">
+          <ol>
+            <li><a href="/soluciones/">Soluciones</a></li>
+            <li><a href="/soluciones/?industria=cafeterias">Cafeterías</a></li>
+            <li aria-current="page">México</li>
+          </ol>
+        </nav>
+
+        <div class="article-meta">Cafeterías · México</div>
+        <h1>Promociones y combos en cafeterías mexicanas: cómo medir el margen real cuando los productos tienen costos diferentes</h1>
+        
+        <p class="article-deck">En una cafetería es habitual crear combos — café + pan dulce, cappuccino + sándwich, latte + postre + jugos — para impulsar el ticket promedio y atraer clientes. Sin embargo, cuando los ítems que integran el combo tienen costos de materia prima muy…</p>
+        
+      </div>
+    </header>
+
+    <section class="article-section">
+      <div class="container">
+        <div class="article-layout">
+          <aside class="article-toc" aria-label="Índice del artículo">
+            <strong>En esta página</strong>
+            <a href="#introduccion">Introducción</a>
+            <a href="#como-aparece">Cómo aparece</a>
+            <a href="#senales">Señales</a>
+            <a href="#por-que-ocurre">Por qué ocurre</a>
+            <a href="#impacto">Impacto</a>
+            <a href="#crecer">Al crecer</a>
+            <a href="#controlar">Qué controlar</a>
+            <a href="#solucion">Cómo puede ayudar Demiops</a>
+            <a href="#fuentes">Fuentes</a>
+          </aside>
+
+          <article class="article-content">
+            
+            <section id="introduccion">
+              <h2>Introducción</h2>
+              <p>En una cafetería es habitual crear combos — café + pan dulce, cappuccino + sándwich, latte + postre + jugos — para impulsar el ticket promedio y atraer clientes. Sin embargo, cuando los ítems que integran el combo tienen costos de materia prima muy diferentes, el margen real de la promoción puede quedar oculto. El dueño o gerente ve un “food cost” promedio que parece aceptable y, sin darse cuenta, está subsidiando a los productos más caros con la rentabilidad de los demás.</p>
+
+            </section>
+            
+            
+
+            <section id="como-aparece">
+              <h2>Cómo aparece este problema en Cafeterías</h2>
+              <ol>
+<li><strong>Promociones con precios “redondos”</strong>: se fija un precio de venta del combo sin desglosar cuánto aporta cada producto al ingreso neto.</li>
+<li><strong>Variación de costos de insumos</strong>: el precio del café, la leche, el azúcar o el pan puede cambiar cada semana por la inflación de alimentos en México (según el estudio de Masterestaurant, 2026, los costos de insumos subieron con fuerza).</li>
+<li><strong>Canales de venta mixtos</strong>: el mismo combo se vende en salón, para llevar y a través de apps de delivery que cobran comisiones del 15 %‑30 % (Rezku 2026).</li>
+<li><strong>Descuentos cruzados</strong>: el combo incluye un “descuento del bundle” que reduce el ingreso neto antes de aplicar los demás costos.</li>
+</ol>
+<p>El resultado es que el margen que realmente llega a la caja puede ser mucho menor al esperado, e incluso negativo en algunos componentes.</p>
+
+            </section>
+            
+            
+
+            <section id="senales">
+              <h2>Señales de que el negocio tiene este problema</h2>
+              <ol>
+<li><strong>El margen promedio del combo está dentro del rango objetivo (≈ 32 % food cost) pero la utilidad neta mensual disminuye</strong>.</li>
+<li><strong>Al revisar el reporte de ventas aparecen pérdidas en los ítems de mayor costo (ej. jugo natural, postre artesanal) aunque el combo se vende con buen volumen</strong>.</li>
+<li><strong>Los costos de entrega y el “swipe fee” de tarjetas (2,35 % según Texas Restaurant Association 2025) no aparecen en los cálculos de rentabilidad</strong>.</li>
+<li><strong>Se reciben alertas de inventario de materias primas que se están agotando rápidamente, sin que el precio del combo se haya ajustado</strong>.</li>
+<li><strong>Los empleados reportan que el tiempo de preparación del combo aumenta, pero el ticket promedio no refleja ese esfuerzo adicional</strong>.</li>
+<li><strong>Los reportes de desperdicio indican mermas importantes en los productos que forman parte del combo</strong>.</li>
+<li><strong>Los indicadores de margen por canal (salón vs. delivery) son muy diferentes, pero se usan los mismos precios de lista</strong>.</li>
+</ol>
+
+            </section>
+            
+            
+
+            <section id="por-que-ocurre">
+              <h2>Por qué ocurre</h2>
+              <h3>Operativas</h3>
+<ul>
+<li><strong>Costeo promedio</strong>: se calcula el food cost del combo como la suma de los costos totales dividida por el precio de lista, ocultando ítems con food cost &gt; 32 %. (Fuente 1)</li>
+<li><strong>Falta de desglose de componentes</strong>: el sistema de punto de venta no permite registrar cada ingrediente o producto como una unidad separada dentro del combo.</li>
+</ul>
+<h3>Administrativas</h3>
+<ul>
+<li><strong>Actualización tardía de precios de compra</strong>: los precios de insumos no se actualizan en tiempo real, por lo que la receta usada para el costeo queda desactualizada. (Fuente 1)</li>
+<li><strong>No se incluyen comisiones de delivery ni swipe fees</strong> en el cálculo del margen (Fuente 2).</li>
+</ul>
+<h3>Comerciales</h3>
+<ul>
+<li><strong>Promociones basadas en descuentos</strong> sin analizar el ingreso neto después del descuento del bundle (Fuente 2).</li>
+<li><strong>Uso del mismo precio de lista en todos los canales</strong>, aunque el costo neto varíe significativamente entre salón y apps de delivery.</li>
+</ul>
+<h3>Externas</h3>
+<ul>
+<li><strong>Inflación de alimentos en México</strong> que eleva los costos de materias primas y rompe la hipótesis de costos fijos en la fórmula tradicional (Fuente 1).</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="impacto">
+              <h2>Qué impacto puede tener</h2>
+              <ul>
+<li><strong>Reducción del margen bruto</strong>: el descuento del combo más las comisiones pueden elevar el food cost real por encima del 32 % objetivo.</li>
+<li><strong>Erosión del flujo de efectivo</strong>: el ingreso neto por venta de combos es menor, lo que afecta la capacidad de cubrir nómina (36,5 % de ventas en servicio completo, NRA 2024) y otros gastos fijos.</li>
+<li><strong>Aumento del desperdicio</strong>: productos con alta merma en el combo (ej. jugos que no se venden completos) generan costos invisibles que impactan el CMV.</li>
+<li><strong>Desmotivación del personal</strong>: si el tiempo de preparación no se traduce en mayor remuneración, la rotación de empleados puede incrementarse.</li>
+<li><strong>Dificultad para escalar</strong>: al abrir nuevas sucursales o canales, el error de costeo se replica y el daño al punto de equilibrio se multiplica.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="crecer">
+              <h2>Por qué se vuelve más difícil al crecer</h2>
+              <ul>
+<li><strong>Más sucursales</strong> → mayor cantidad de combos y mayor complejidad para mantener actualizado el costo de cada ingrediente en cada punto de venta.</li>
+<li><strong>Diversificación de canales</strong> (delivery, take‑away, venta en café) genera diferentes estructuras de costos (comisiones, swipe fees) que deben aplicarse a cada combo por separado.</li>
+<li><strong>Incremento de proveedores</strong> → variaciones de precios y condiciones que requieren un seguimiento constante.</li>
+<li><strong>Mayor número de ítems</strong> en el menú hace que la combinatoria de combos sea exponencial, dificultando el control manual del margen por combinación.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="controlar">
+              <h2>Qué debería poder saber o controlar el negocio</h2>
+              <ol>
+<li><strong>Costo actualizado por ingrediente</strong> (precio de compra, gramaje, merma).</li>
+<li><strong>Food cost individual de cada ítem</strong> del combo, comparado con el umbral del 32 % (Fuente 1).</li>
+<li><strong>Precio neto del combo por canal</strong> después de aplicar el descuento del bundle.</li>
+<li><strong>Comisiones de delivery y swipe fees</strong> aplicables a cada venta (Fuente 2).</li>
+<li><strong>Margen de contribución en dólares por transacción</strong>, no solo porcentaje.</li>
+<li><strong>Volumen de ventas del combo</strong> y su uplift esperado en los primeros 14 días (Fuente 1).</li>
+<li><strong>Desperdicio asociado a cada componente</strong> del combo.</li>
+<li><strong>Alertas automáticas</strong> cuando el costo de un insumo suba más del 10 % o cuando el food cost de un ítem supere el 32 %.</li>
+</ol>
+<p>Contar con esta información permite decidir si se ajusta la receta, se cambia el precio del combo o se sustituye un ítem por uno más rentable.</p>
+
+            </section>
+            
+            
+
+            <section id="solucion" class="demiops-solution">
+              <div class="solution-label">Cómo puede ayudar Demiops</div>
+              <h2>Solución Demiops</h2>
+              <p>Esta capacidad permite definir cada combo como un “kit” compuesto por los ítems individuales (café, pan, jugo, etc.). Cada componente mantiene su receta, costo actualizado y porcentaje de food cost, de forma que el sistema calcula automáticamente el costo total del kit y el margen de contribución por canal. Además, el módulo de kits se integra con inventario y compras, de modo que cualquier variación en el precio de un insumo actualiza instantáneamente el costeo del combo. Con reglas de negocio automáticas se pueden crear alertas cuando el food cost de algún componente supera el 32 % o cuando el margen neto del combo cae por debajo del objetivo.</p>
+
+              <a class="solution-button" href="/index.html#contact">Hablar con Demiops</a>
+            </section>
+            
+
+            <div class="availability-note">
+              <i class="bi bi-info-circle"></i>
+              <strong>Nota sobre disponibilidad:</strong>
+              Las funciones descritas pueden variar según la configuración, versión, país, industria y necesidades específicas de cada negocio.
+              Algunas capacidades pueden requerir configuración, adaptación o desarrollo adicional y pueden incorporarse en versiones futuras de la solución.
+            </div>
+            
+
+            <section id="cierre">
+              <h2>Cierre</h2>
+              <p>El margen real de los combos en una cafetería mexicana puede quedar oculto cuando se mezclan productos con costos diferentes y se ignoran comisiones, descuentos y variaciones de insumos. Detectar señales tempranas, desglosar el costo por componente y controlar el ingreso neto por canal son pasos esenciales para evitar pérdidas de margen. La capacidad <strong>Producción, Ensamble y Kits</strong> ofrece la base estructural para gestionar combos como kits, mantener actualizados los costos y generar alertas que ayuden a mantener la rentabilidad mientras se siguen ofreciendo promociones atractivas.</p>
+
+            </section>
+            
+
+            
+            <section id="fuentes" class="article-sources">
+              <h2>Fuentes consultadas</h2>
+              <ol>
+                
+                <li>
+                  
+                  <a href="https://costorestaurante.com/costo-real-de-un-combo-o-promocion-definicion-costorestaurante.html" target="_blank" rel="nofollow noopener">Masterestaurant – Costo real de un combo o promoción: método tradicional vs método Masterestaurant (actualizado 2026‑09‑30)</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="https://masterestaurant.com/costo-real-de-un-combo-o-promocion-estudio-original-masterestaurant.html" target="_blank" rel="nofollow noopener">Masterestaurant – Costo real de combos 2026: food cost +7,4 pts – Estudio Original (actualizado 2026‑09‑28)</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="https://gastro.finance/guias/precios-menu-margen-real" target="_blank" rel="nofollow noopener">GastroFinance – Cómo definir precios gastronómicos con margen real (actualizado 2026‑06‑14)</a>
+                  
+                </li>
+                
+              </ol>
+            </section>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-cta">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h2>¿Tu negocio enfrenta este problema?</h2>
+            <p>Demiops puede adaptar una solución a la forma en que opera tu empresa.</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <a class="cta-btn" href="/index.html#contact">Contáctanos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="related-section section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Problemas Relacionados</h2>
+        </div>
+
+        <div class="row gy-4">
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Cafeterías · México</div>
+              <h3>Volatilidad del costo del café, leche, cacao y otros insumos: cómo afecta el margen de tus bebidas en las cafeterías mexicanas</h3>
+              <a class="read-more" href="/soluciones/mexico/cafeterias/volatilidad-costo-cafe-leche-cacao-otros-insumos-cambia.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Cafeterías · México</div>
+              <h3>Merma de leche, panadería y alimentos preparados: por qué no se refleja en el costo de venta de tu cafetería</h3>
+              <a class="read-more" href="/soluciones/mexico/cafeterias/merma-leche-panaderia-alimentos-preparados-no-refleja-precision.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Cafeterías · México</div>
+              <h3>Dificultad para pronosticar la demanda por franja horaria, clima, día de la semana y ubicación en cafeterías mexicanas</h3>
+              <a class="read-more" href="/soluciones/mexico/cafeterias/dificultad-pronosticar-demanda-franja-horaria-clima-dia-semana.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+  </main>
+<footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Unete A Nuestra Lista de Correo</h4>
+            <p>Suscribete a nuestra lista de correo para recibir las ultimas noticias sobre productos y servicios
+              Demiops!</p>
+            <form
+              action="https://docs.google.com/forms/d/e/1FAIpQLSdp3P4VUMDW5lahOkjoAm0iMS6a3mKbym6rhSJwNBwQsTW5kw/formResponse"
+              method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="entry.1045781291"><input type="submit"
+                  value="Suscribete"></div>
+              <div class="loading">Cargando</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Tu suscripcion fue recibida. Muchas Gracias!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="/index.html" class="d-flex align-items-center">
+            <span class="sitename">Demiops</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>11201 N Tatum Blvd #300</p>
+            <p>Phoenix, AZ 85028</p>
+            <p class="mt-3"><strong>Telefono:</strong> <span>+1 480 331 9210</span></p>
+            <p><strong>Email:</strong> <span>info@demiops.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Ligas Utiles</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Sobre Nosotros</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/terminos.html">Terminos de Servicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/privacidad.html">Politica de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Productos y Servicios</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-core.html">Demiops Core</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-data.html">Demiops Data</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-intelligence.html">Demiops Intelligence</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/modem.html">ModEm - Modernizacion Empresarial</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/servicios-profesionales.html">Servicios Profesionales</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Siguenos</h4>
+          <p>Contactanos por cualquiera de nuestras redes sociales.</p>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/demiops"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/demiopsinc"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com/company/demiops"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Demiops, Inc.</strong> <span>Todos Los Derechos
+          Reservados</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+
+</body>
+</html>
