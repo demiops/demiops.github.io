@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Falta de trazabilidad entre lote de producción, insumos y producto vendido en panaderías mexicanas | Demiops</title>
+  <meta name="description" content="En una panadería el proceso que va desde la llegada de la harina, levadura y demás insumos hasta la venta del pan en la vitrina pasa por varias etapas…">
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+  <link rel="canonical" href="https://demiops.com/soluciones/mexico/panaderias/falta-trazabilidad-lote-produccion-insumos-utilizados-producto-vendido.html">
+
+  <style>
+    .resources-page main { padding-top: 66px; }
+
+    .article-head {
+      background: #f5f6f8;
+      padding: 34px 0 52px;
+      border-bottom: 1px solid #eceef1;
+    }
+
+    .article-breadcrumbs ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      font-size: 14px;
+      color: #7a7a7a;
+    }
+
+    .article-breadcrumbs li + li {
+      padding-left: 10px;
+    }
+
+    .article-breadcrumbs li + li::before {
+      content: "/";
+      display: inline-block;
+      padding-right: 10px;
+      color: #b0b0b0;
+    }
+
+    .article-breadcrumbs a {
+      color: #6a6a6a;
+    }
+
+    .article-breadcrumbs a:hover {
+      color: var(--heading-color);
+    }
+
+    .article-meta {
+      color: var(--heading-color);
+      font-family: var(--nav-font);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .article-head h1 {
+      color: #3d4d6a;
+      max-width: 1000px;
+      font-size: clamp(36px, 4.5vw, 56px);
+      line-height: 1.08;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .article-deck {
+      max-width: 800px;
+      font-size: 19px;
+      line-height: 1.65;
+      color: #666;
+      margin: 0;
+    }
+
+    .article-section {
+      padding: 60px 0;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 820px);
+      gap: 52px;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .article-toc {
+      position: sticky;
+      top: 105px;
+      background: #f5f6f8;
+      padding: 22px 18px;
+      border-radius: 8px;
+      border-top: 3px solid var(--accent-color);
+    }
+
+    .article-toc strong {
+      display: block;
+      color: #3d4d6a;
+      font-family: var(--heading-font);
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .article-toc a {
+      display: block;
+      color: #666;
+      font-size: 14px;
+      padding: 7px 8px;
+      margin-left: -8px;
+      border-left: 2px solid transparent;
+    }
+
+    .article-toc a:hover {
+      color: var(--heading-color);
+      border-left-color: var(--accent-color);
+    }
+
+    .article-content {
+      color: var(--default-color);
+      font-size: 17px;
+      line-height: 1.82;
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      color: var(--heading-color);
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 42px 0 16px;
+    }
+
+    .article-content section:first-child h2 {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: #3d4d6a;
+      font-size: 22px;
+      font-weight: 650;
+      margin: 28px 0 12px;
+    }
+
+    .article-content p {
+      margin-bottom: 18px;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      padding-left: 1.35rem;
+      margin-bottom: 22px;
+    }
+
+    .article-content li {
+      margin-bottom: 8px;
+    }
+
+    .article-content strong {
+      color: #3d4d6a;
+    }
+
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0 28px;
+      font-size: 15px;
+    }
+
+    .article-content th,
+    .article-content td {
+      border: 1px solid #e0e3e7;
+      padding: 12px 14px;
+      vertical-align: top;
+    }
+
+    .article-content th {
+      background: #f5f6f8;
+      color: #3d4d6a;
+    }
+
+    .demiops-solution {
+      margin-top: 46px;
+      padding: 30px;
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      border-left: 5px solid var(--heading-color);
+    }
+
+    .demiops-solution .solution-label {
+      color: var(--heading-color);
+      font-family: var(--nav-font);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .demiops-solution h2 {
+      color: #3d4d6a;
+      margin: 7px 0 14px;
+    }
+
+    .demiops-solution .solution-button {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--accent-color);
+      color: #fff;
+      padding: 11px 24px;
+      border-radius: 50px;
+      font-family: var(--heading-font);
+      font-weight: 600;
+    }
+
+    .demiops-solution .solution-button:hover {
+      background: var(--heading-color);
+      color: #fff;
+    }
+
+    .availability-note {
+      margin-top: 16px;
+      background: #f5f6f8;
+      border: 1px solid #e4e6e9;
+      border-radius: 8px;
+      padding: 15px 17px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #6d6d6d;
+    }
+
+    .availability-note i {
+      color: var(--heading-color);
+      margin-right: 6px;
+    }
+
+    .article-sources {
+      border-top: 1px solid #e5e5e5;
+      margin-top: 46px;
+      padding-top: 24px;
+    }
+
+    .article-sources h2 {
+      margin-top: 0;
+    }
+
+    .article-sources a {
+      word-break: break-word;
+    }
+
+    .article-cta {
+      background: #3d4d6a;
+      color: #fff;
+      padding: 52px 0;
+    }
+
+    .article-cta h2 {
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .article-cta p {
+      color: rgba(255,255,255,.8);
+      margin: 0;
+    }
+
+    .article-cta .cta-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 50px;
+      background: var(--accent-color);
+      color: #fff;
+      font-family: var(--heading-font);
+      font-weight: 600;
+    }
+
+    .article-cta .cta-btn:hover {
+      background: var(--heading-color);
+      color: #fff;
+    }
+
+    .related-section {
+      background: #f5f6f8;
+    }
+
+    .related-section .section-title {
+      padding-bottom: 38px;
+    }
+
+    .related-card {
+      height: 100%;
+      background: #fff;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 0 25px rgba(0,0,0,.06);
+      border-top: 3px solid transparent;
+      transition: .3s;
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      border-top-color: var(--accent-color);
+    }
+
+    .related-card .related-meta {
+      color: var(--heading-color);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .related-card h3 {
+      color: #3d4d6a;
+      font-size: 20px;
+      line-height: 1.3;
+      margin: 9px 0 13px;
+    }
+
+    .related-card .read-more {
+      color: var(--heading-color);
+      font-weight: 600;
+    }
+
+    @media (max-width: 1199px) {
+      .resources-page main { padding-top: 60px; }
+    }
+
+    @media (max-width: 991px) {
+      .article-layout { display: block; }
+      .article-toc { display: none; }
+    }
+
+    @media (max-width: 767px) {
+      .article-head { padding: 28px 0 40px; }
+      .article-section { padding: 42px 0; }
+      .demiops-solution { padding: 24px; }
+    }
+  </style>
+
+</head>
+
+<body class="resources-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="/index.html" class="logo d-flex align-items-center me-auto">
+        <img src="/assets/img/logo.png" alt="Demiops">
+        <h1 class="sitename">Demiops</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/index.html#hero">Inicio</a></li>
+          <li><a href="/index.html#about">Nosotros</a></li>
+
+          <li class="dropdown"><a href="/index.html#services"><span>Productos</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/demiops-core.html">Demiops Core</a></li>
+              <li><a href="/demiops-data.html">Demiops Data</a></li>
+              <li><a href="/demiops-intelligence.html">Demiops Intelligence - Operaciones IA</a></li>
+              <li><a href="/modem.html">Modernizacion Empresarial</a></li>
+              <li><a href="/servicios-profesionales.html">Servicios Profesionales</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Tecnologia</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/asistentes-ia.html">Asistentes de Inteligencia Artificial</a></li>
+              <li><a href="/agentes-ia.html">Agentes de Inteligencia Artificial</a></li>
+              <li><a href="/automatizacion-inteligente.html">Automaticazion Inteligente</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/index.html#faq-2">Preguntas Frequentes</a></li>
+
+          <li class="dropdown">
+            <a href="/soluciones/" class="active"><span>Soluciones</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="/soluciones/">Problemas y Soluciones para PYMEs</a></li>
+              <li><a href="/assets/doc/Cloud-Hybrida-Demiops.pdf">Caso de Uso - Demiops Core</a></li>
+              <li><a href="/assets/doc/Demiops Intelligence-Demiops.pdf">Caso de Uso - Demiops Intelligence</a></li>
+              <li><a href="/assets/doc/MODEM-Modernizacion-Empresarial-para-PYMEs.pdf">Caso de Uso - MODEM</a></li>
+              <li><a href="/assets/doc/Servicios-Profesionales-Demiops.pdf">Caso de Uso - Servicios Profesionales</a></li>
+              <li><a href="/assets/doc/Asistentes-Inteligentes-para-PyMEs.pdf">Caso de Uso - Asistente de IA</a></li>
+              <li><a href="/assets/doc/Agentes-Inteligentes-para-PyMEs.pdf">Caso de Uso - Agente de IA</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/index.html#contact">Contacto</a></li>
+          <li><a href="/en/index.html" style="color: #f6b26b; font-weight: bold;">EN</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="/index.html#contact">Inicia Ya</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <header class="article-head">
+      <div class="container">
+        <nav class="article-breadcrumbs" aria-label="breadcrumb">
+          <ol>
+            <li><a href="/soluciones/">Soluciones</a></li>
+            <li><a href="/soluciones/?industria=panaderias">Panaderías</a></li>
+            <li aria-current="page">México</li>
+          </ol>
+        </nav>
+
+        <div class="article-meta">Panaderías · México</div>
+        <h1>Falta de trazabilidad entre lote de producción, insumos y producto vendido en panaderías mexicanas</h1>
+        
+        <p class="article-deck">En una panadería el proceso que va desde la llegada de la harina, levadura y demás insumos hasta la venta del pan en la vitrina pasa por varias etapas: recepción, mezcla, horneado, empaquetado y despacho. Cuando no se registra de forma clara qué materias…</p>
+        
+      </div>
+    </header>
+
+    <section class="article-section">
+      <div class="container">
+        <div class="article-layout">
+          <aside class="article-toc" aria-label="Índice del artículo">
+            <strong>En esta página</strong>
+            <a href="#introduccion">Introducción</a>
+            <a href="#como-aparece">Cómo aparece</a>
+            <a href="#senales">Señales</a>
+            <a href="#por-que-ocurre">Por qué ocurre</a>
+            <a href="#impacto">Impacto</a>
+            <a href="#crecer">Al crecer</a>
+            <a href="#controlar">Qué controlar</a>
+            <a href="#solucion">Cómo puede ayudar Demiops</a>
+            <a href="#fuentes">Fuentes</a>
+          </aside>
+
+          <article class="article-content">
+            
+            <section id="introduccion">
+              <h2>Introducción</h2>
+              <p>En una panadería el proceso que va desde la llegada de la harina, levadura y demás insumos hasta la venta del pan en la vitrina pasa por varias etapas: recepción, mezcla, horneado, empaquetado y despacho. Cuando no se registra de forma clara qué materias primas fueron usadas en cada lote de producción, ni se vincula ese lote con los productos que se entregan al cliente, el negocio pierde visibilidad. Esa “caja negra” se traduce en problemas de calidad, costos inesperados y dificultad para responder a reclamos o requerimientos regulatorios.</p>
+
+            </section>
+            
+            
+
+            <section id="como-aparece">
+              <h2>Cómo aparece este problema en Panaderías</h2>
+              <ul>
+<li><strong>Registros manuales o en papeles</strong>: la hoja de producción se llena a mano y se guarda en el archivo; al día siguiente ya no se recuerda qué lote de harina corresponde al pan que se vendió.</li>
+<li><strong>Sistemas independientes</strong>: el inventario de insumos se lleva en una hoja de Excel, mientras que las ventas se registran en el punto de venta (POS). No hay un vínculo automático entre ambos.</li>
+<li><strong>Etiquetado insuficiente</strong>: los panes salen del horno sin código de lote o con etiquetas genéricas, lo que impide identificar rápidamente el origen de un problema.</li>
+<li><strong>Rotación de personal</strong>: cuando cambian los horneros o los encargados de almacén, la información se pierde o se interpreta de forma distinta.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="senales">
+              <h2>Señales de que el negocio tiene este problema</h2>
+              <ol>
+<li><strong>No puedes responder a un cliente que reporta una falla de sabor o textura</strong> y no sabes qué lote de producción corresponde al producto entregado.</li>
+<li><strong>Frecuentes rechazos de inspecciones sanitarias</strong> por falta de documentación que demuestre el origen de los ingredientes.</li>
+<li><strong>Desperdicio elevado</strong> de materias primas porque no se sabe cuánta se utilizó en cada horneado y cuánta quedó sin registrar.</li>
+<li><strong>Pérdida de ventas</strong> cuando, ante una posible contaminación, se tiene que retirar todo el inventario por falta de identificación de lotes específicos.</li>
+<li><strong>Dificultad para planear compras</strong>: el área de compras no tiene datos claros de cuánto se consume por lote, generando sobre‑stock o faltantes.</li>
+<li><strong>Incumplimiento de normas de trazabilidad</strong> que exige la autoridad sanitaria mexicana (COFEPRIS) para productos alimenticios.</li>
+<li><strong>Descoordinación entre áreas</strong>: almacén, producción y ventas trabajan con información que no se actualiza en tiempo real.</li>
+</ol>
+
+            </section>
+            
+            
+
+            <section id="por-que-ocurre">
+              <h2>Por qué ocurre</h2>
+              <h3>Operativas</h3>
+<ul>
+<li><strong>Procesos de registro manual</strong> y falta de códigos de lote en materias primas y productos terminados.</li>
+<li><strong>Ausencia de un sistema único</strong> que conecte inventario, producción y ventas.</li>
+</ul>
+<h3>Administrativas</h3>
+<ul>
+<li><strong>Políticas de documentación poco claras</strong> o inexistentes sobre cómo registrar cada lote.</li>
+<li><strong>Capacitación insuficiente</strong> del personal en la importancia de la trazabilidad.</li>
+</ul>
+<h3>Comerciales</h3>
+<ul>
+<li><strong>Enfoque en la venta rápida</strong> y en la presentación del producto, dejando de lado la captura de datos de fondo.</li>
+<li><strong>Poca presión del cliente</strong> para exigir información detallada sobre el origen del pan.</li>
+</ul>
+<h3>Externas</h3>
+<ul>
+<li><strong>Regulaciones cambiantes</strong> que exigen cada vez más evidencia documental sin que la panadería cuente con el soporte necesario.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="impacto">
+              <h2>Qué impacto puede tener</h2>
+              <ul>
+<li><strong>Costos de retiro y reposición</strong>: sin saber qué lote está afectado, la panadería debe retirar todo el inventario, generando pérdidas económicas y de imagen.</li>
+<li><strong>Margen comprimido</strong>: el desperdicio de materias primas y la sobreproducción por falta de datos precisos aumentan el costo de los productos.</li>
+<li><strong>Riesgo legal</strong>: la falta de evidencia de trazabilidad puede derivar en sanciones por parte de la autoridad sanitaria.</li>
+<li><strong>Pérdida de clientes</strong>: la confianza se erosiona cuando no se puede garantizar la calidad y la procedencia del alimento.</li>
+<li><strong>Ineficiencia operativa</strong>: se gastan horas en búsquedas manuales y conciliaciones entre hojas de Excel y tickets de venta.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="crecer">
+              <h2>Por qué se vuelve más difícil al crecer</h2>
+              <ul>
+<li><strong>Más sucursales</strong> implican múltiples puntos de recepción de insumos y de venta, lo que multiplica los registros que deben sincronizarse.</li>
+<li><strong>Mayor número de empleados</strong> aumenta la probabilidad de que la información se registre de forma distinta o se omita.</li>
+<li><strong>Variedad de productos</strong> (panes artesanales, pasteles, bollería) exige diferentes recetas y, por tanto, diferentes matrices de insumos por lote.</li>
+<li><strong>Incremento de proveedores</strong> dificulta el seguimiento de la procedencia de cada materia prima.</li>
+<li><strong>Volumen de ventas mayor</strong> genera más transacciones que deben enlazarse con los lotes de producción, lo que supera la capacidad de los métodos manuales.</li>
+</ul>
+
+            </section>
+            
+            
+
+            <section id="controlar">
+              <h2>Qué debería poder saber o controlar el negocio</h2>
+              <ol>
+<li><strong>Identificador único de lote</strong> para cada materia prima recibida (harina, azúcar, levadura) y para cada producción de pan.</li>
+<li><strong>Lista de insumos consumidos</strong> por lote de producción, con cantidades exactas y proveedores.</li>
+<li><strong>Fecha y hora de horneado</strong>, número de horno y operario responsable.</li>
+<li><strong>Vinculación automática</strong> entre el lote de producción y los productos que se venden (código de barra, QR o etiqueta).</li>
+<li><strong>Historial de movimientos</strong> de inventario que muestre cuándo y cómo se consumió cada insumo y se generó cada producto terminado.</li>
+<li><strong>Alertas</strong> de lotes que estén próximos a vencer o que presenten desviaciones de calidad.</li>
+<li><strong>Reportes de consumo por lote</strong> para alimentar la planificación de compras y evitar sobre‑stock.</li>
+</ol>
+
+            </section>
+            
+            
+
+            <section id="solucion" class="demiops-solution">
+              <div class="solution-label">Cómo puede ayudar Demiops</div>
+              <h2>Solución Demiops</h2>
+              <p>Esta capacidad permite definir la estructura de cada producto de panadería, especificar los componentes (harina, levadura, azúcar, etc.) y sus cantidades, generar órdenes de producción y reservar automáticamente los insumos necesarios. Además, registra el avance de la producción, consume los materiales y crea un registro del lote terminado que puede enlazarse con la venta mediante códigos de lote o etiquetas. Con la configuración adecuada, el módulo puede:</p>
+<ul>
+<li>Asignar un número de lote a cada tanda de masa y a cada lote de pan horneado.</li>
+<li>Guardar qué insumos y en qué cantidades fueron utilizados en ese lote.</li>
+<li>Vincular el lote de producción con los documentos de venta (ticket o factura) para que, al consultar una venta, se vea inmediatamente el origen del producto.</li>
+<li>Generar reportes de consumo por lote y alertas de lotes críticos.</li>
+</ul>
+<p>Es posible complementar esta capacidad con códigos de barra o QR para una identificación rápida en almacén y en mostrador, y con procesos automáticos que creen la orden de producción a partir de una orden de venta, cerrando el ciclo de trazabilidad.</p>
+
+              <a class="solution-button" href="/index.html#contact">Hablar con Demiops</a>
+            </section>
+            
+
+            <div class="availability-note">
+              <i class="bi bi-info-circle"></i>
+              <strong>Nota sobre disponibilidad:</strong>
+              Las funciones descritas pueden variar según la configuración, versión, país, industria y necesidades específicas de cada negocio.
+              Algunas capacidades pueden requerir configuración, adaptación o desarrollo adicional y pueden incorporarse en versiones futuras de la solución.
+            </div>
+            
+
+            <section id="cierre">
+              <h2>Cierre</h2>
+              <p>La falta de trazabilidad entre lote de producción, insumos y producto vendido expone a las panaderías a costos inesperados, riesgos regulatorios y pérdida de confianza del cliente. Controlar información clave –identificadores de lote, insumos consumidos, fechas de horneado y vínculo con la venta– es esencial para mantener la calidad y la rentabilidad. La capacidad <strong>Producción, Ensamble y Kits</strong> ofrece la base estructural para registrar y relacionar todos esos datos en una única plataforma, representando un punto de partida práctico para solucionar el problema.</p>
+
+            </section>
+            
+
+            
+            <section id="fuentes" class="article-sources">
+              <h2>Fuentes consultadas</h2>
+              <ol>
+                
+                <li>
+                  
+                  <a href="https://es.scribd.com/document/288678306/Plan-de-Control-de-La-Trazabilidad" target="_blank" rel="nofollow noopener">Plan de Trazabilidad en Panadería – Scribd, “Plan de Control de La Trazabilidad”</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="https://totalfoodcontrol.com/trazabilidad-alimentaria-en-panaderia-y-confiteria/" target="_blank" rel="nofollow noopener">Trazabilidad Alimentaria en Panadería y Confitería – Total Food Control</a>
+                  
+                </li>
+                
+                <li>
+                  
+                  <a href="https://tecnoproductos.com/sistema-control-de-lotes-y-produccion/" target="_blank" rel="nofollow noopener">Sistema Control de Lotes y Producción en Trazabilidad Alimenticia – TecnoProductos</a>
+                  
+                </li>
+                
+              </ol>
+            </section>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-cta">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h2>¿Tu negocio enfrenta este problema?</h2>
+            <p>Demiops puede adaptar una solución a la forma en que opera tu empresa.</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <a class="cta-btn" href="/index.html#contact">Contáctanos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="related-section section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Problemas Relacionados</h2>
+        </div>
+
+        <div class="row gy-4">
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Panaderías · México</div>
+              <h3>Merma diaria de productos frescos en panaderías mexicanas: cómo identificarla y reducirla</h3>
+              <a class="read-more" href="/soluciones/mexico/panaderias/merma-diaria-producto-fresco-pierde-valor-rapidamente-finalizar.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Panaderías · México</div>
+              <h3>Cómo definir los volúmenes de producción por producto, horario y día sin generar faltantes ni sobrantes en una panadería mexicana</h3>
+              <a class="read-more" href="/soluciones/mexico/panaderias/dificultad-definir-volumenes-produccion-producto-horario-dia-generar.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex">
+            <article class="related-card">
+              <div class="related-meta">Panaderías · México</div>
+              <h3>Cómo los cambios en precios de harina, mantequilla, azúcar, huevo y energía afectan el costo de cada lote en tu panadería</h3>
+              <a class="read-more" href="/soluciones/mexico/panaderias/cambios-precios-harina-mantequilla-azucar-huevo-energia-alteran.html">Leer artículo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+  </main>
+<footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Unete A Nuestra Lista de Correo</h4>
+            <p>Suscribete a nuestra lista de correo para recibir las ultimas noticias sobre productos y servicios
+              Demiops!</p>
+            <form
+              action="https://docs.google.com/forms/d/e/1FAIpQLSdp3P4VUMDW5lahOkjoAm0iMS6a3mKbym6rhSJwNBwQsTW5kw/formResponse"
+              method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="entry.1045781291"><input type="submit"
+                  value="Suscribete"></div>
+              <div class="loading">Cargando</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Tu suscripcion fue recibida. Muchas Gracias!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="/index.html" class="d-flex align-items-center">
+            <span class="sitename">Demiops</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>11201 N Tatum Blvd #300</p>
+            <p>Phoenix, AZ 85028</p>
+            <p class="mt-3"><strong>Telefono:</strong> <span>+1 480 331 9210</span></p>
+            <p><strong>Email:</strong> <span>info@demiops.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Ligas Utiles</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Sobre Nosotros</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/terminos.html">Terminos de Servicio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/privacidad.html">Politica de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Productos y Servicios</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-core.html">Demiops Core</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-data.html">Demiops Data</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/demiops-intelligence.html">Demiops Intelligence</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/modem.html">ModEm - Modernizacion Empresarial</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="/servicios-profesionales.html">Servicios Profesionales</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Siguenos</h4>
+          <p>Contactanos por cualquiera de nuestras redes sociales.</p>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/demiops"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/demiopsinc"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com/company/demiops"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Demiops, Inc.</strong> <span>Todos Los Derechos
+          Reservados</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+
+</body>
+</html>
